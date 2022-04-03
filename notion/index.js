@@ -12,8 +12,6 @@ const getPageTitle = (entry) => {
   // doesn't work if string is empty
   // const [, {title: [{plain_text}]}] = Object.entries(properties).find(([, value]) => value.id == 'title');
 
-  // TODO: #1 maybe add function to Object prototype?
-
   // get title
   const [titleKey, titleObject] = Object.entries(entry.properties).find(([, value]) => {
     return value.id == 'title';
