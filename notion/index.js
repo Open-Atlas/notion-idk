@@ -140,7 +140,7 @@ try {
   };
 
 
-  // TODO: Parser - explore all relations and create all the appropriate data
+  // TODO: #5 sync also citations from page to page
 
   exports.sync = async () => {
     const databases = await this.request({requestType: 'searchDb'});
