@@ -3,6 +3,7 @@ const db = require('../neo4j/db.js');
 const sampleData = require('./sample.json');
 
 const notion = new Client({auth: 'secret_6myhGoDBvah6hswnfelQeJpl6Y80l0FNbJD3CDyp4YS' || process.env.NOTION_API_KEY});
+// TODO: #4 find a way to have a main branch without console.logs
 
 const deepClone = ((obj) => {
   return JSON.parse(JSON.stringify(obj));
