@@ -1,0 +1,1808 @@
+[
+    {
+        "object": "page",
+        "id": "43074db6-bd3b-4ed3-b096-0de1afcccd67",
+        "title": "Norbert Elias",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "12d45890-59a2-45e2-b20e-3f4ac41661ea"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Norbert-Elias-43074db6bd3b4ed3b0960de1afcccd67"
+    },
+    {
+        "object": "page",
+        "id": "4c91b50c-52f8-4239-93d4-53a258e656dd",
+        "title": "Gloria Anzaldúa",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Gloria-Anzald-a-4c91b50c52f8423993d453a258e656dd"
+    },
+    {
+        "object": "page",
+        "id": "f66092f2-5479-4a09-9e0d-204d1a9aa291",
+        "title": "Ben Cave",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Ben-Cave-f66092f254794a099e0d204d1a9aa291"
+    },
+    {
+        "object": "page",
+        "id": "f003bf6b-159a-4772-bef0-94a73e4d9140",
+        "title": "David Eaves",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/David-Eaves-f003bf6b159a4772bef094a73e4d9140"
+    },
+    {
+        "object": "page",
+        "id": "85728c7e-aa9d-4067-9db0-e994d7b4e3e2",
+        "title": "David Tarrant",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/David-Tarrant-85728c7eaa9d40679db0e994d7b4e3e2"
+    },
+    {
+        "object": "page",
+        "id": "a4fb9c36-9530-4163-95cb-5061313d2e11",
+        "title": "Sigall",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Sigall-a4fb9c369530416395cb5061313d2e11"
+    },
+    {
+        "object": "page",
+        "id": "5e9bb469-3e13-4dd7-a80c-5562556d6acc",
+        "title": "Mahatma Gandhi",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Mahatma-Gandhi-5e9bb4693e134dd7a80c5562556d6acc"
+    },
+    {
+        "object": "page",
+        "id": "c41cde2f-7ef5-4c42-980d-901ea9e57978",
+        "title": "Martin Luther King Jr.",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Martin-Luther-King-Jr-c41cde2f7ef54c42980d901ea9e57978"
+    },
+    {
+        "object": "page",
+        "id": "1287a6ee-b2df-4add-a3b5-d58500b0e1eb",
+        "title": "Maya Angelou",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Maya-Angelou-1287a6eeb2df4adda3b5d58500b0e1eb"
+    },
+    {
+        "object": "page",
+        "id": "6089ddb5-fbb5-47bf-a0c2-4f92192a708b",
+        "title": "Nelson Mandela",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Nelson-Mandela-6089ddb5fbb547bfa0c24f92192a708b"
+    },
+    {
+        "object": "page",
+        "id": "e5726b0f-8d39-481d-8dee-0703685400a5",
+        "title": "Mary Kaldor",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Mary-Kaldor-e5726b0f8d39481d8dee0703685400a5"
+    },
+    {
+        "object": "page",
+        "id": "42848be8-02ee-4f69-941f-2e63c0b96c2d",
+        "title": "Lord William Rees-Mogg",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Lord-William-Rees-Mogg-42848be802ee4f69941f2e63c0b96c2d"
+    },
+    {
+        "object": "page",
+        "id": "6023a06c-e068-43bd-a1bf-ca9f2e6bb75d",
+        "title": "James Dale Davidson",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/James-Dale-Davidson-6023a06ce06843bda1bfca9f2e6bb75d"
+    },
+    {
+        "object": "page",
+        "id": "f89b51b2-2c4e-4123-90b5-01b068642679",
+        "title": "",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/f89b51b22c4e412390b501b068642679"
+    },
+    {
+        "object": "page",
+        "id": "8dcb8b1c-eca3-45bf-81fa-4c5e9b7a5b6a",
+        "title": "Albert Otto Hirschman",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "3f16cd6a-dd42-4e2e-8340-8df696f23ac6"
+                    },
+                    {
+                        "id": "3f8b27c2-42e6-47b3-a610-b1cc8007acf6"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Albert-Otto-Hirschman-8dcb8b1ceca345bf81fa4c5e9b7a5b6a"
+    },
+    {
+        "object": "page",
+        "id": "b09b4f23-bf85-41e9-86bb-202915e5677c",
+        "title": "Frederic Bastiat",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "6a050bf3-ebac-45ea-9ef3-b24f4c6da1d5"
+                    },
+                    {
+                        "id": "6f2d19c3-347d-485b-b522-6542c27118b1"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Frederic-Bastiat-b09b4f23bf8541e986bb202915e5677c"
+    },
+    {
+        "object": "page",
+        "id": "6cad5e3e-d6d6-4b21-8db6-2d455bc79fbf",
+        "title": "Leonard Read",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "7a7699b0-0f0a-4c7e-aeff-e4680c4288c4"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Leonard-Read-6cad5e3ed6d64b218db62d455bc79fbf"
+    },
+    {
+        "object": "page",
+        "id": "afa29cd9-b386-4a00-8524-7e3ff7687a28",
+        "title": "Habermas",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Habermas-afa29cd9b3864a0085247e3ff7687a28"
+    },
+    {
+        "object": "page",
+        "id": "ed3bd768-c51b-4ce3-aec9-2d27452464d0",
+        "title": "Kenneth Arrow",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Kenneth-Arrow-ed3bd768c51b4ce3aec92d27452464d0"
+    },
+    {
+        "object": "page",
+        "id": "96d3daee-2f73-44ef-9766-662f746fa8a1",
+        "title": "Madison",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Madison-96d3daee2f7344ef9766662f746fa8a1"
+    },
+    {
+        "object": "page",
+        "id": "ef9a014f-da14-40f8-979f-071f1757d934",
+        "title": "Wittgenstein",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Wittgenstein-ef9a014fda1440f8979f071f1757d934"
+    },
+    {
+        "object": "page",
+        "id": "3c3d8fd2-9963-4c16-940e-738ae1539478",
+        "title": "Charles Taylor",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Charles-Taylor-3c3d8fd299634c16940e738ae1539478"
+    },
+    {
+        "object": "page",
+        "id": "52ff132e-6c09-4ab5-9454-dc419742b1d7",
+        "title": "Michael Walzer",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Michael-Walzer-52ff132e6c094ab59454dc419742b1d7"
+    },
+    {
+        "object": "page",
+        "id": "ab4c2fd6-f9d0-4514-bf47-2abe495ce45f",
+        "title": "Michael Sandel",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Michael-Sandel-ab4c2fd6f9d04514bf472abe495ce45f"
+    },
+    {
+        "object": "page",
+        "id": "f7cc8481-a38c-4625-8ead-6684d32bf0ef",
+        "title": "Richard Rorty",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Richard-Rorty-f7cc8481a38c46258ead6684d32bf0ef"
+    },
+    {
+        "object": "page",
+        "id": "904dddda-00f9-4975-a043-a33fb14080bd",
+        "title": "Alasdair MacIntyre",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Alasdair-MacIntyre-904dddda00f94975a043a33fb14080bd"
+    },
+    {
+        "object": "page",
+        "id": "08fddc89-e085-4971-b0c8-647f64c28318",
+        "title": "Patrick Devlin",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Patrick-Devlin-08fddc89e0854971b0c8647f64c28318"
+    },
+    {
+        "object": "page",
+        "id": "ac825154-3f24-411e-8516-43e11f0c6497",
+        "title": "Edmund Burke",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Edmund-Burke-ac8251543f24411e851643e11f0c6497"
+    },
+    {
+        "object": "page",
+        "id": "1eaf446d-6d41-4627-b8c5-583f0a3da5a5",
+        "title": "Douglas Roe",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Douglas-Roe-1eaf446d6d414627b8c5583f0a3da5a5"
+    },
+    {
+        "object": "page",
+        "id": "0b9fd398-7a0e-4047-abe6-bcb0956880ac",
+        "title": "Chief Seattle",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Chief-Seattle-0b9fd3987a0e4047abe6bcb0956880ac"
+    },
+    {
+        "object": "page",
+        "id": "32711dd4-dccd-45e0-a270-814ca9f1d8b5",
+        "title": "Calabresi",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Calabresi-32711dd4dccd45e0a270814ca9f1d8b5"
+    },
+    {
+        "object": "page",
+        "id": "497537b5-3206-4af6-82b4-337ad233aa84",
+        "title": "Richard Posner",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Richard-Posner-497537b532064af682b4337ad233aa84"
+    },
+    {
+        "object": "page",
+        "id": "764845a4-dfa4-4654-89c5-4eb4739ed28c",
+        "title": "Karl Popper",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Karl-Popper-764845a4dfa4465489c54eb4739ed28c"
+    },
+    {
+        "object": "page",
+        "id": "64b031c3-eb88-4a7d-b8f5-71fad4f911f5",
+        "title": "Mandeville",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Mandeville-64b031c3eb884a7db8f571fad4f911f5"
+    },
+    {
+        "object": "page",
+        "id": "c180d734-7a42-4ff0-b9e4-4a796b6bca37",
+        "title": "Adam Smith",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Adam-Smith-c180d7347a424ff0b9e44a796b6bca37"
+    },
+    {
+        "object": "page",
+        "id": "9b06fb67-b143-4237-bf86-fac9d0e6a53c",
+        "title": "Isaiah Berlin",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Isaiah-Berlin-9b06fb67b1434237bf86fac9d0e6a53c"
+    },
+    {
+        "object": "page",
+        "id": "ecbb6cb1-1116-4274-a7b6-e266e8d8e9bb",
+        "title": "Filmer",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": []
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Filmer-ecbb6cb111164274a7b6e266e8d8e9bb"
+    },
+    {
+        "object": "page",
+        "id": "12ddff73-a1d3-4833-b692-1c47f2fd2695",
+        "title": "Karl Marx",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "2074c071-df3d-4668-b278-cb561c9b6bf2"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Karl-Marx-12ddff73a1d34833b6921c47f2fd2695"
+    },
+    {
+        "object": "page",
+        "id": "8c824b27-fc02-42d6-8d68-1c436642280b",
+        "title": "Friedrich Engels",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "2074c071-df3d-4668-b278-cb561c9b6bf2"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Friedrich-Engels-8c824b27fc0242d68d681c436642280b"
+    },
+    {
+        "object": "page",
+        "id": "aba12055-735e-4b47-8f54-a6ce92e53351",
+        "title": "John Stuart Mill",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "3235eb5d-a4f1-400b-8f78-f93c3dd6c9e4"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/John-Stuart-Mill-aba12055735e4b478f54a6ce92e53351"
+    },
+    {
+        "object": "page",
+        "id": "01adfa3b-fe22-41f8-91bf-b041fb9af5b9",
+        "title": "Werner Stark",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "d76cb346-62a6-4173-accf-b9f60784d2f1"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Werner-Stark-01adfa3bfe2241f891bfb041fb9af5b9"
+    },
+    {
+        "object": "page",
+        "id": "3c2750e9-0750-4ccb-b5bd-946be3c159c3",
+        "title": "Jeremy Bentham",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "70f3d92d-1f22-4aae-bdb0-5a2de7199501"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Jeremy-Bentham-3c2750e907504ccbb5bd946be3c159c3"
+    },
+    {
+        "object": "page",
+        "id": "ab13df3e-84f5-4719-9709-d1a794f192fb",
+        "title": "Thomas Hobbes",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "2fa7d0b8-b30d-40db-b232-b4d7293b13d2"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Thomas-Hobbes-ab13df3e84f547199709d1a794f192fb"
+    },
+    {
+        "object": "page",
+        "id": "7d74f3e5-3f45-43d6-9637-817b281adb7f",
+        "title": "Hannah Arendt",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "17798ece-5bd3-4f4c-9637-f80b28fe3dd8"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Hannah-Arendt-7d74f3e53f4543d69637817b281adb7f"
+    },
+    {
+        "object": "page",
+        "id": "9ba0b488-7204-443f-b4e0-d1da578665b8",
+        "title": "Ian Shapiro",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "a2a12650-5ad8-4bac-86e6-4d81e26cad23"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/Ian-Shapiro-9ba0b4887204443fb4e0d1da578665b8"
+    },
+    {
+        "object": "page",
+        "id": "df34b2d2-1680-46e0-b911-bad169e397f3",
+        "title": "John Locke",
+        "properties": {
+            "Courses": {
+                "id": "%40NFh",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Property)": {
+                "id": "OSuC",
+                "type": "relation",
+                "relation": []
+            },
+            "Books": {
+                "id": "T%3Etl",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "c900ec12-2993-4a81-bd6c-b277d63bf70d"
+                    }
+                ]
+            },
+            "Documents": {
+                "id": "Y%7Cnj",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Articles (Authors)": {
+                "id": "iWrH",
+                "type": "relation",
+                "relation": []
+            },
+            "Related to Quotes (Assign)": {
+                "id": "j%5CX%3F",
+                "type": "relation",
+                "relation": []
+            }
+        },
+        "url": "https://www.notion.so/John-Locke-df34b2d2168046e0b911bad169e397f3"
+    }
+]

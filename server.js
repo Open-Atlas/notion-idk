@@ -1,0 +1,95 @@
+const Koa = require('koa');
+const Router = require('@koa/router');
+const helmet = require('koa-helmet');
+const koaBody = require('koa-body')({multipart: true});
+const cors = require('@koa/cors');
+
+const app = new Koa();
+const router = new Router();
+
+app.use(cors());
+app.use(helmet());
+
+const notion = require('./notion/');
+
+
+router.get('/', (ctx) => {
+  ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
+});
+
+router.post('/', (ctx) => {
+  ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
+});
+
+/* const basicAuth = process.env.BASIC_AUTH;
+
+router.use(async (ctx, next) => {
+	//console.log(ctx.request.header);
+	if (basicAuth && ctx.request.header.authorization !== basicAuth) {
+		ctx.throw(401);
+	}
+	//console.log("Auth OK");
+	await next();
+}); */
+
+router.get('/csv', (ctx) => {
+  ctx.response.body = 'blep.';
+});
+
+// PARSES CSV FILE
+
+const fs = require('fs');
+const csv = require('csv-parser');
+
+// eslint-disable-next-line require-jsdoc
+function parseCsv(filePath) {
+  const results = [];
+  return new Promise((resolve) => {
+    fs.createReadStream(filePath)
+        .pipe(csv())
+        .on('data', (data) => results.push(data))
+        .on('end', () => {
+          resolve(results);
+        });
+  });
+}
+
+router.get('/notion/sync', async (ctx) => {
+  ctx.response.body = await notion.sync();
+});
+
+router.get('/notion/relationJson', (ctx) => {
+  const x = notion.relationJson(ctx.params);
+  ctx.response.body = x.Books;
+});
+
+router.get('/notion/:requestType/:param?', async (ctx) => {
+  ctx.response.body = await notion.request(ctx.params);
+});
+
+router.post('/csv', koaBody, async (ctx) => {
+  // console.log(ctx.request.files)
+  await parseCsv(ctx.request.files.csv.path).then((x) =>
+    ctx.response.body = JSON.stringify(x));
+});
+
+router.post('/formData', (ctx) => {
+  ctx.response.body = JSON.stringify(ctx.request.body);
+});
+
+router.use((ctx) => {
+  ctx.response.status = 404;
+});
+
+app.use(router.routes());
+
+app.on('error', (e) => {
+  // headers data makes Koa crash during error handling
+  e.headers = {};
+  console.error(e);
+});
+
+// PORT
+const port = process.env.PORT || 3003;
+app.listen(port, () => {});
+console.log('listening on port ' + port);
