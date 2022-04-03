@@ -12,7 +12,7 @@ const getPageTitle = (entry) => {
   // doesn't work if string is empty
   // const [, {title: [{plain_text}]}] = Object.entries(properties).find(([, value]) => value.id == 'title');
 
-  // TO-EVALUATE: maybe add function to Object prototype?
+  // TODO: #1 maybe add function to Object prototype?
 
   // get title
   const [titleKey, titleObject] = Object.entries(entry.properties).find(([, value]) => {
@@ -141,19 +141,57 @@ try {
   };
 
 
-  // Parser - explore all relations and create all the appropriate data
+  // TODO: Parser - explore all relations and create all the appropriate data
 
   exports.sync = async () => {
     const databases = await this.request({requestType: 'searchDb'});
-    // send title / label for neo4j
     // console.log('SYNC', databases);
+
+    await db.deleteAll(); // deletes everything
+
     databases.forEach((entry) => {
       this.syncOne(entry);
     });
   };
 
-  exports.syncOne = async ({id, title}) => {
-    const pages = await this.request({requestType: 'queryDb', param: id});
+  exports.syncOne = async (database) => {
+    const pages = await this.request({requestType: 'queryDb', param: database.id});
+
+    // first we create all the nodes
+    for (const page of pages) {
+      await db.mergeNode(page.id, page.title, database.title);
+    }
+    // then the relationships (previously the async queries created duplicated nodes)
+    pages.forEach((page) => {
+      Object.entries(page.properties).forEach(([key, property]) => {
+        const relationName = key.split('  ')[0];
+        if (!relationName) {
+          return;
+        }
+        switch (property.type) {
+          case 'relation':
+            property.relation.forEach((relation) => {
+              // create relationship
+              /* obj1 = {
+                id: page.id,
+              };
+              obj2 = {
+                id: relation.id,
+              }; */
+
+              db.merge(page.id, relationName, relation.id); // implement direction & label
+            });
+            break;
+        }
+      });
+    });
+
+    return true;
+  };
+
+  // creates duplicate nodes with same id, the neo4j MERGE is executed simultaneously and causes this
+  exports.syncOne_buggy = async (database) => {
+    const pages = await this.request({requestType: 'queryDb', param: database.id});
 
     // console.log(results);
 
@@ -187,7 +225,7 @@ try {
         // db.mergeNode(entry); // console.log(entry);
       });
       delete entry.properties;
-      db.mergeNode(entry.id, entry.title); // console.log(entry);
+      db.mergeNode(entry.id, entry.title, database.title); // console.log(entry);
     });
 
     return true;
