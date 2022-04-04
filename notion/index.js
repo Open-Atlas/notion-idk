@@ -159,8 +159,18 @@ try {
     const pages = await this.request({requestType: 'queryDb', param: database.id});
 
     // first we create all the nodes
+	  // TODO: find a way to make creations parallel, but still 'await' for the whole creation process (it doesn't completely wait for this loop to finish)
     for (const page of pages) {
-      await db.mergeNode(page.id, page.title, database.title);
+		// TODO: create object of update rather than sending singular parameters
+		
+		//const properties = page.properties
+		
+      await db.mergeNode(
+		  page.id,
+		  database.title, // Label
+		  page.title, // Name
+		  page.url // Notion URL
+	  );
     }
     // then the relationships (previously the async queries created duplicated nodes)
     pages.forEach((page) => {
@@ -183,6 +193,10 @@ try {
               db.merge(page.id, relationName, relation.id); // implement direction & label
             });
             break;
+			case 'files':
+				const filesArray = property.files.map(x => x.name)
+				console.log(page.title, filesArray)
+				filesArray.length ? db.updateNode(page.id, key, filesArray) : ""
         }
       });
     });

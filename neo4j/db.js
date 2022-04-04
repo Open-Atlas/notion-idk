@@ -44,15 +44,15 @@ try {
     await session.close();
   };
 
-  exports.mergeNode = async (id, name, label) => {
+  exports.mergeNode = async (id, label, name, notionUrl ) => {
     const session = driver.session();
 
     // const writeQuery = `MERGE (n1 ${{...document}}) RETURN n1`; // not working unfortunately
     // neither JSON.stringify.. need to implement my own stringifer to make it work
 
     const writeQuery = `MERGE (n { id:"${id}" }) 
-    SET n.name="${name}", n:${label}
-        RETURN n`;
+    SET n:${label}, n.name="${name}", n.urlNotion="${notionUrl}"
+	RETURN n`;
 
     const writeResult = await session.writeTransaction((tx) =>
       tx.run(writeQuery ),
@@ -61,6 +61,30 @@ try {
       const node = record.get('n');
       console.log(
           `CREATED ${node.properties.name}`,
+      );
+    });
+    await session.close();
+  };
+	
+	exports.updateNode = async (id, property, data=""  ) => {
+    const session = driver.session();
+		
+		/*console.log(`MATCH (n { id:"${id}" }) 
+    SET n.${property}=${JSON.stringify(data)}
+	RETURN n`)*/
+
+		//TODO: change so it works for both arrays and primitives
+    const writeQuery = `MATCH (n { id:"${id}" }) 
+    SET n.${property}=${JSON.stringify(data)}
+	RETURN n`;
+
+    const writeResult = await session.writeTransaction((tx) =>
+      tx.run(writeQuery),
+    );
+    writeResult.records.forEach((record) => {
+      const node = record.get('n');
+      console.log(
+          `UPDATED ${node.properties.name}`,
       );
     });
     await session.close();
