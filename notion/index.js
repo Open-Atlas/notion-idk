@@ -9,6 +9,8 @@ const deepClone = ((obj) => {
   return JSON.parse(JSON.stringify(obj));
 });
 
+// trying out a commit
+
 const getPageTitle = (entry) => {
   // doesn't work if string is empty
   // const [, {title: [{plain_text}]}] = Object.entries(properties).find(([, value]) => value.id == 'title');
