@@ -12,6 +12,17 @@ app.use(helmet());
 
 const notion = require('./notion/');
 
+const { createReadStream } = require('fs')
+
+router.get('/graph', (ctx) => {
+ctx.type = 'html';
+    ctx.body = createReadStream('graph.html');
+});
+
+router.get('/graph2', (ctx) => {
+ctx.type = 'html';
+    ctx.body = createReadStream('graph2.html');
+});
 
 router.get('/', (ctx) => {
   ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
