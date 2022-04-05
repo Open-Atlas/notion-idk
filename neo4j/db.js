@@ -66,18 +66,36 @@ try {
     await session.close();
   };
 	
-	exports.updateNode = async (id, property, data=""  ) => {
+	exports.updateNode = async (id, property, data) => {
+		
     const session = driver.session();
 		
 		/*console.log(`MATCH (n { id:"${id}" }) 
     SET n.${property}=${JSON.stringify(data)}
 	RETURN n`)*/
+		
+		let set = ""
+		
+		if(Array.isArray(data)){
+						data.forEach((d, i) => set = `${set} SET n.${property}${i}=${JSON.stringify(d)}` )
+		} else {
+			set = `SET n.${property}=${JSON.stringify(data)}`
+		}
+	
+		
 
 		//TODO: change so it works for both arrays and primitives
-    const writeQuery = `MATCH (n { id:"${id}" }) 
-    SET n.${property}=${JSON.stringify(data)}
+    
+		const writeQuery = `MATCH (n { id:"${id}" }) 
+		${set}
 	RETURN n`;
-
+		
+		/*const writeQuery = `MATCH (n { id:"${id}" }) 
+    SET n.${property}=${JSON.stringify(data)}
+	RETURN n`;*/
+		
+		//console.log("UPDATE NODE", writeQuery)
+try{
     const writeResult = await session.writeTransaction((tx) =>
       tx.run(writeQuery),
     );
@@ -87,6 +105,10 @@ try {
           `UPDATED ${node.properties.name}`,
       );
     });
+} catch(e){
+	console.log(e)
+	console.log(writeQuery)
+}
     await session.close();
   };
 

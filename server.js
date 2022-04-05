@@ -78,6 +78,10 @@ router.get('/notion/:requestType/:param?', async (ctx) => {
   ctx.response.body = await notion.request(ctx.params);
 });
 
+router.get('/notion/raw/:requestType/:param?', async (ctx) => {
+  ctx.response.body = await notion.requestRaw(ctx.params);
+});
+
 router.post('/csv', koaBody, async (ctx) => {
   // console.log(ctx.request.files)
   await parseCsv(ctx.request.files.csv.path).then((x) =>

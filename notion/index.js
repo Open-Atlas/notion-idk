@@ -103,6 +103,10 @@ try {
   exports.request = async function request({requestType, param = undefined}) {
     return refine(await this[requestType](param));
   };
+	
+	  exports.requestRaw = async function request({requestType, param = undefined}) {
+    return await this[requestType](param);
+  };
 
   // search
   exports.search = async (query = undefined, filter = {}) => { // filter 'database' or 'page'
@@ -136,6 +140,23 @@ try {
     return await notion.pages.retrieve({page_id: id});
   // returns object
   };
+	
+	exports.retrievePageProperties = async (pageId, propertyId) => {
+  return await notion.pages.properties.retrieve({ page_id: pageId, property_id: propertyId });
+}
+	
+exports.retrieveBlockChildren = async (id) => {
+	return await notion.blocks.children.list({
+    block_id: id,
+    page_size: 50,
+  });
+}
+
+exports.retrieveBlock = async (id) => {
+	return await notion.blocks.retrieve({
+    block_id: id
+  });
+}
 
   exports.retrieveDb = async (id) => {
     return await notion.databases.retrieve({database_id: id});
@@ -197,6 +218,13 @@ try {
 				const filesArray = property.files.map(x => x.name)
 				console.log(page.title, filesArray)
 				filesArray.length ? db.updateNode(page.id, key, filesArray) : ""
+				break;
+			case 'url':
+				db.updateNode(page.id, key, property.url)
+				break;
+			case 'rich_text':
+				property.rich_text?.[0]?.plain_text ? (db.updateNode(page.id, key, property.rich_text[0].plain_text)) : "";
+				break;
         }
       });
     });
