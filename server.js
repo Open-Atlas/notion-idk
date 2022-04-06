@@ -16,12 +16,12 @@ const { createReadStream } = require('fs')
 
 router.get('/graph', (ctx) => {
 ctx.type = 'html';
-    ctx.body = createReadStream('graph.html');
+    ctx.body = createReadStream('./d3networkgraph/graph.html');
 });
 
 router.get('/graph2', (ctx) => {
 ctx.type = 'html';
-    ctx.body = createReadStream('graph2.html');
+    ctx.body = createReadStream('./d3networkgraph/graph2.html');
 });
 
 router.get('/', (ctx) => {

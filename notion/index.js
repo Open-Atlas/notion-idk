@@ -2,14 +2,14 @@ const {Client} = require('@notionhq/client');
 const db = require('../neo4j/db.js');
 const sampleData = require('./sample.json');
 
-const notion = new Client({auth: 'secret_6myhGoDBvah6hswnfelQeJpl6Y80l0FNbJD3CDyp4YS' || process.env.NOTION_API_KEY});
+const notion = new Client({auth: process.env.NOTION_API_KEY});
 // TODO: #4 find a way to have a main branch without console.logs
 
 const deepClone = ((obj) => {
   return JSON.parse(JSON.stringify(obj));
 });
 
-// trying out a commit
+// TODO: create relationship from block to page in case the block is a link, see POSTMAN documentation RETRIEVE BLOCK - LINK TO PAGE https://open-atlas.postman.co/workspace/Open-Atlas~30cd5d2f-5eec-4a2a-9710-2930b1dbbe83/documentation/7075921-e61672b7-4165-4916-ad76-222babf24c19?entity=request-7075921-96f60b4e-21f4-4036-a0dc-f70171872bde
 
 const getPageTitle = (entry) => {
   // doesn't work if string is empty
@@ -99,12 +99,13 @@ try {
   exports.wrapper = async () => {
 
   };
-  // request
+  // all requests go through a refinement / formatting
   exports.request = async function request({requestType, param = undefined}) {
     return refine(await this[requestType](param));
   };
 	
-	  exports.requestRaw = async function request({requestType, param = undefined}) {
+	// requests for data unformatted, same as Notion's API
+	exports.requestRaw = async function request({requestType, param = undefined}) {
     return await this[requestType](param);
   };
 
@@ -231,51 +232,8 @@ exports.retrieveBlock = async (id) => {
 
     return true;
   };
-
-  // creates duplicate nodes with same id, the neo4j MERGE is executed simultaneously and causes this
-  exports.syncOne_buggy = async (database) => {
-    const pages = await this.request({requestType: 'queryDb', param: database.id});
-
-    // console.log(results);
-
-    // get label / DB name using retrieveDb(id)
-    // could also retrieve all the labels through subsequent retrieveDb(id) from the relations
-
-    pages.forEach((entry) => {
-      Object.entries(entry.properties).forEach(([key, property]) => {
-        const relationName = key.split('  ')[0];
-        if (!relationName) {
-          return;
-        }
-        switch (property.type) {
-          case 'relation':
-            property.relation.forEach((relation) => {
-              // create relationship
-              /* obj1 = {
-                id: entry.id,
-              };
-              obj2 = {
-                id: relation.id,
-              }; */
-
-              db.merge(entry.id, relationName, relation.id); // implement direction & label
-            });
-            break;
-        }
-        delete entry.properties[key];
-        delete entry.object;
-        // merge object
-        // db.mergeNode(entry); // console.log(entry);
-      });
-      delete entry.properties;
-      db.mergeNode(entry.id, entry.title, database.title); // console.log(entry);
-    });
-
-    return true;
-  };
-} catch (e) {
-  console.log('ERROR', e);
-  throw e;
+}catch(e){
+	console.log(e)
 }
 
 exports.relationJson = () => {

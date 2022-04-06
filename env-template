@@ -1,0 +1,11 @@
+NOTION_API_KEY=
+NEO4J_URI=
+NEO4J_USER=
+NEO4J_PASS=
+
+used in npm run dev, in production you usually make use of the hosting platform environment variables
+
+RENAME THIS FILE TO
+.env
+
+delete these comments.
