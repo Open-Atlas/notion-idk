@@ -51,7 +51,7 @@ try {
     // neither JSON.stringify.. need to implement my own stringifer to make it work
 
     const writeQuery = `MERGE (n { id:"${id}" }) 
-    SET n:${label}, n.name="${name}", n.urlNotion="${notionUrl}"
+    SET n:\`${label}\`, n.name="${name}", n.urlNotion="${notionUrl}"
 	RETURN n`;
 
     const writeResult = await session.writeTransaction((tx) =>
@@ -74,25 +74,27 @@ try {
     SET n.${property}=${JSON.stringify(data)}
 	RETURN n`)*/
 		
+		// ISSUE: this is the right code, but neo4j Bloom crashes with an array of URLs, see https://neo4j-bloom.canny.io/feature-requests/p/neo4j-bloom-crashes-if-node-has-an-array-property-with-more-than-1-value
+		/*const writeQuery = `MATCH (n { id:"${id}" }) 
+    SET n.\`${property}\`=${JSON.stringify(data)}
+	RETURN n`;*/
+		// TODO: proper workaround would be to breakdown just URLs in single properties, leave the rest in arrays
+		
 		let set = ""
+		
 		
 		if(Array.isArray(data)){
 						data.forEach((d, i) => set = `${set} SET n.${property}${i}=${JSON.stringify(d)}` )
 		} else {
 			set = `SET n.${property}=${JSON.stringify(data)}`
 		}
-	
 		
-
-		//TODO: change so it works for both arrays and primitives
-    
 		const writeQuery = `MATCH (n { id:"${id}" }) 
 		${set}
-	RETURN n`;
+	RETURN n`;    
 		
-		/*const writeQuery = `MATCH (n { id:"${id}" }) 
-    SET n.${property}=${JSON.stringify(data)}
-	RETURN n`;*/
+		
+		
 		
 		//console.log("UPDATE NODE", writeQuery)
 try{
