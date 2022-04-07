@@ -74,7 +74,7 @@ try {
     SET n.${property}=${JSON.stringify(data)}
 	RETURN n`)*/
 		
-		// ISSUE: this is the right code, but neo4j Bloom crashes with an array of URLs, see https://neo4j-bloom.canny.io/feature-requests/p/neo4j-bloom-crashes-if-node-has-an-array-property-with-more-than-1-value
+		// ISSUE: #8 this is the right code, but neo4j Bloom crashes with an array of URLs, see https://neo4j-bloom.canny.io/feature-requests/p/neo4j-bloom-crashes-if-node-has-an-array-property-with-more-than-1-value
 		/*const writeQuery = `MATCH (n { id:"${id}" }) 
     SET n.\`${property}\`=${JSON.stringify(data)}
 	RETURN n`;*/
