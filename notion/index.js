@@ -142,6 +142,20 @@ try {
   // returns object
   };
 	
+updatePage = async (id, properties) => {
+	return await notion.pages.update({
+    page_id: id,
+		properties
+    // properties: {
+    //   'In stock': {
+    //     checkbox: true,
+    //   },
+    // },
+  }).then(console.log(`${id} UPDATED WITH ${JSON.stringify(properties)}`));
+}
+	
+	
+	
 	exports.retrievePageProperties = async (pageId, propertyId) => {
   return await notion.pages.properties.retrieve({ page_id: pageId, property_id: propertyId });
 }
@@ -317,3 +331,77 @@ exports.relationJson = () => {
 
   return relationList;
 };
+
+exports.relationSync = async (id) => { //database id
+	
+	const { results: pages } = await notion.databases.query({
+      database_id: id,
+	})
+    // returns array
+  
+	let title;
+		
+	pages.forEach(async (page) => {
+		[[, {title}]] = Object.entries(page.properties).filter(([key, property]) => property.id == 'title')
+		const mentions = title.filter(block => block.type=='mention')
+		console.log(mentions)
+		
+		const mentionsTitles = []
+		mentions.forEach(async ({mention}) => {
+			switch (mention.type){
+				case 'page':
+					//query
+					const {title: mentionTitle} = await refine(await this['retrievePage'](mention.page.id))
+					mentionsTitles.push(mentionTitle)
+					
+					
+			}
+		})
+		
+		const {properties: databaseProperties} = await this.retrieveDb(id)
+		try{
+		!databaseProperties.Mentions ? await updateDatabase(id, {"properties":{"Mentions":{"rich_text":{}}}}) : ''
+		} catch(e){
+			console.log("Error with DB update", e)
+		}
+		
+		const properties = {
+						Mentions: {
+							"type": "rich_text",
+							"rich_text": [
+								{
+									"type": "text",
+									"text": {
+										"content":  mentionsTitles.join(" "),
+										"link": null
+									},
+								}
+							]
+						}
+					}
+		try{
+		updatePage(page.id, properties)
+		}catch(e){
+			console.log("Error with page update", e)
+		}
+		//take mentions and update properties
+	})	
+	
+	//read title
+	//get all the type "mention"
+	//query its ID and get the name
+	//create/update the property with the mentions found
+}
+
+var axios = require('axios');
+//update database is not included in the notion js sdk - see docmentation https://developers.notion.com/reference/update-a-database
+const updateDatabase = async (id, properties) => {
+	//encodeURI(id);
+	await axios.patch(`https://api.notion.com/v1/databases/${id}`, properties, {
+		headers: {
+			'Authorization': `Bearer ${process.env.NOTION_API_KEY}`,
+			'Content-Type': 'application/json',
+			'Notion-Version': '2022-02-22'
+		}
+	})
+}
