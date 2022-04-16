@@ -9,6 +9,8 @@ const deepClone = ((obj) => {
   return JSON.parse(JSON.stringify(obj));
 });
 
+// conditional console.log function
+
 // TODO: create relationship from block to page in case the block is a link, see POSTMAN documentation RETRIEVE BLOCK - LINK TO PAGE https://open-atlas.postman.co/workspace/Open-Atlas~30cd5d2f-5eec-4a2a-9710-2930b1dbbe83/documentation/7075921-e61672b7-4165-4916-ad76-222babf24c19?entity=request-7075921-96f60b4e-21f4-4036-a0dc-f70171872bde
 
 const getPageTitle = (entry) => {
@@ -151,7 +153,10 @@ updatePage = async (id, properties) => {
     //     checkbox: true,
     //   },
     // },
-  }).then(console.log(`${id} UPDATED WITH ${JSON.stringify(properties)}`));
+  }).then(async page => {
+		const {title} = await getPageTitle(page)
+		console.log(`${title} UPDATED WITH ${JSON.stringify(properties)}`)
+	});
 }
 	
 	
@@ -343,26 +348,36 @@ exports.relationSync = async (id) => { //database id
 		
 	pages.forEach(async (page) => {
 		[[, {title}]] = Object.entries(page.properties).filter(([key, property]) => property.id == 'title')
+		// if(title[0].plain_text == "In published articles, every entity with a specific name (company, brand..) is a mention (link), but just the first one is highlighted. (possibly "){
+		// 	console.log("SYNC ", title)
+		// }
 		const mentions = title.filter(block => block.type=='mention')
-		console.log(mentions)
+		//  if(title[0].plain_text == "In published articles, every entity with a specific name (company, brand..) is a mention (link), but just the first one is highlighted. (possibly "){
+		// 	console.log("SYNC ", mentions)
+		// }
 		
 		const mentionsTitles = []
-		mentions.forEach(async ({mention}) => {
+		
+		for (const {mention} of mentions){
 			switch (mention.type){
 				case 'page':
 					//query
+					try{
 					const {title: mentionTitle} = await refine(await this['retrievePage'](mention.page.id))
 					mentionsTitles.push(mentionTitle)
+					} catch(e){
+						console.log(mention.page.id, ' PAGE NOT FOUND')
+					}
 					
 					
 			}
-		})
+		}
 		
 		const {properties: databaseProperties} = await this.retrieveDb(id)
 		try{
 		!databaseProperties.Mentions ? await updateDatabase(id, {"properties":{"Mentions":{"rich_text":{}}}}) : ''
 		} catch(e){
-			console.log("Error with DB update", e)
+			console.log("MENTIONS UPDATE ERROR", e)
 		}
 		
 		const properties = {
@@ -380,7 +395,7 @@ exports.relationSync = async (id) => { //database id
 						}
 					}
 		try{
-		updatePage(page.id, properties)
+			mentionsTitles.length ? await updatePage(page.id, properties) : ''
 		}catch(e){
 			console.log("Error with page update", e)
 		}
