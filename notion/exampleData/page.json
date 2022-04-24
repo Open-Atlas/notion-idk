@@ -1,0 +1,302 @@
+{
+    "object": "page",
+    "id": "6002a342-2903-416b-9b7c-8c363eb15ed6",
+    "title": "Audible | Worldwide",
+    "properties": {
+        "Export OPML": {
+            "id": "%3Av~h",
+            "type": "select",
+            "select": null
+        },
+        "Dark Mode": {
+            "id": "%3C%3AoT",
+            "type": "select",
+            "select": {
+                "id": "59b82500-1ed8-45f3-8057-0e7ece5f1f2e",
+                "name": "✓",
+                "color": "green"
+            }
+        },
+        "Save to Library": {
+            "id": "FLqo",
+            "type": "select",
+            "select": {
+                "id": "59b82500-1ed8-45f3-8057-0e7ece5f1f2e",
+                "name": "✓",
+                "color": "green"
+            }
+        },
+        "Sleep Timer": {
+            "id": "HBA%60",
+            "type": "select",
+            "select": null
+        },
+        "Price per Month": {
+            "id": "JLbN",
+            "type": "number",
+            "number": 0
+        },
+        "Price": {
+            "id": "O%3Ea%40",
+            "type": "formula",
+            "formula": {
+                "type": "string",
+                "string": "Free"
+            }
+        },
+        "Auto-Download": {
+            "id": "Q%3Cxc",
+            "type": "select",
+            "select": null
+        },
+        "${Index}": {
+            "id": "T%60jw",
+            "type": "rich_text",
+            "rich_text": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "${Software} ${Naming Extension} | ${Country}",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "${Software} ${Naming Extension} | ${Country}",
+                    "href": null
+                }
+            ]
+        },
+        "Queue Episodes": {
+            "id": "YDxS",
+            "type": "select",
+            "select": {
+                "id": "59b82500-1ed8-45f3-8057-0e7ece5f1f2e",
+                "name": "✓",
+                "color": "green"
+            }
+        },
+        "Notes on Episode": {
+            "id": "%5B%3ER%5B",
+            "type": "select",
+            "select": {
+                "id": "59b82500-1ed8-45f3-8057-0e7ece5f1f2e",
+                "name": "✓",
+                "color": "green"
+            }
+        },
+        "Naming": {
+            "id": "%5BqPf",
+            "type": "rich_text",
+            "rich_text": []
+        },
+        "Speed Up": {
+            "id": "%60She",
+            "type": "select",
+            "select": {
+                "id": "59b82500-1ed8-45f3-8057-0e7ece5f1f2e",
+                "name": "✓",
+                "color": "green"
+            }
+        },
+        "Currency": {
+            "id": "aG_%7B",
+            "type": "rich_text",
+            "rich_text": []
+        },
+        "Connect with Others": {
+            "id": "bfKT",
+            "type": "select",
+            "select": null
+        },
+        "Trim Silence": {
+            "id": "eSKF",
+            "type": "select",
+            "select": null
+        },
+        "Ad-Free": {
+            "id": "eUkd",
+            "type": "select",
+            "select": null
+        },
+        "Country": {
+            "id": "jM%7BY",
+            "type": "relation",
+            "relation": [
+                {
+                    "id": "59342560-2073-437f-87ca-ad085cba61ce"
+                }
+            ]
+        },
+        "Platforms": {
+            "id": "opWo",
+            "type": "rich_text",
+            "rich_text": [
+                {
+                    "type": "mention",
+                    "mention": {
+                        "type": "page",
+                        "page": {
+                            "id": "cc17847c-3994-4de6-8386-9191cca0f9f3"
+                        }
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "Browser",
+                    "href": "https://www.notion.so/cc17847c39944de683869191cca0f9f3"
+                },
+                {
+                    "type": "text",
+                    "text": {
+                        "content": " \n",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": " \n",
+                    "href": null
+                },
+                {
+                    "type": "mention",
+                    "mention": {
+                        "type": "page",
+                        "page": {
+                            "id": "26810aca-f69d-4c87-ab03-7b85aa693059"
+                        }
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "Android",
+                    "href": "https://www.notion.so/26810acaf69d4c87ab037b85aa693059"
+                },
+                {
+                    "type": "text",
+                    "text": {
+                        "content": " 6.0\n",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": " 6.0\n",
+                    "href": null
+                },
+                {
+                    "type": "mention",
+                    "mention": {
+                        "type": "page",
+                        "page": {
+                            "id": "b79b4cc9-0865-4e8d-a2ec-3d784c2ad26d"
+                        }
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "iOS",
+                    "href": "https://www.notion.so/b79b4cc908654e8da2ec3d784c2ad26d"
+                },
+                {
+                    "type": "text",
+                    "text": {
+                        "content": " 15.0",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": " 15.0",
+                    "href": null
+                }
+            ]
+        },
+        "Notes on Episode at specific time": {
+            "id": "pWaI",
+            "type": "select",
+            "select": {
+                "id": "59b82500-1ed8-45f3-8057-0e7ece5f1f2e",
+                "name": "✓",
+                "color": "green"
+            }
+        },
+        "Reviews": {
+            "id": "sqqQ",
+            "type": "select",
+            "select": {
+                "id": "59b82500-1ed8-45f3-8057-0e7ece5f1f2e",
+                "name": "✓",
+                "color": "green"
+            }
+        },
+        "Software": {
+            "id": "v%3AWZ",
+            "type": "relation",
+            "relation": [
+                {
+                    "id": "a85922da-385c-419e-893a-92320f4b9998"
+                }
+            ]
+        },
+        "_Export Data": {
+            "id": "c1d42d59-3506-4b97-b5e6-09106dd520e4",
+            "type": "rich_text",
+            "rich_text": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "export Amazon Audible Data does not include Podcast. (after contacting support it does, but missing bookmarks)",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "export Amazon Audible Data does not include Podcast. (after contacting support it does, but missing bookmarks)",
+                    "href": null
+                }
+            ]
+        }
+    },
+    "url": "https://www.notion.so/Audible-Worldwide-6002a3422903416b9b7c8c363eb15ed6"
+}

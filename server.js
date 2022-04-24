@@ -28,6 +28,10 @@ router.get('/', (ctx) => {
   ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
 });
 
+router.get('/aa', (ctx) => {
+  ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
+});
+
 router.post('/', (ctx) => {
   ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
 });
@@ -66,20 +70,38 @@ function parseCsv(filePath) {
 }
 
 router.get('/notion/sync', async (ctx) => {
-  ctx.response.body = await notion.sync();
+  ctx.response.body = await notion.advanced.sync();
 });
 
 router.get('/notion/relationJson', (ctx) => {
-  const x = notion.relationJson(ctx.params);
+  const x = notion.advanced.relationJson(ctx.params);
   ctx.response.body = x.Books;
 });
 
-router.get('/notion/:requestType/:param?', async (ctx) => {
-  ctx.response.body = await notion.request(ctx.params);
+router.get('/notion/addSelectOption', async (ctx) => {
+  ctx.response.body = await notion.advanced.addSelectOption(ctx.query);
 });
 
-router.get('/notion/raw/:requestType/:param?', async (ctx) => {
-  ctx.response.body = await notion.requestRaw(ctx.params);
+router.get('/notion/makeHierarchy', async (ctx) => {
+  ctx.response.body = await notion.advanced.makeHierarchy(ctx.query);
+});
+
+router.get('/notion/formatPage', async (ctx) => {
+  ctx.response.body = await notion.advanced.formatPage(ctx.query);
+});
+
+router.get('/testquery', ctx => {
+	ctx.response.body = ctx.params
+})
+
+router.get('/notion/:functionName', async (ctx) => {
+	const {functionName} = ctx.params;
+  ctx.response.body = await notion.request(functionName, ctx.query);
+});
+
+router.get('/notion/raw/:functionName', async (ctx) => {
+	const {functionName} = ctx.params;
+  ctx.response.body = await notion.request(functionName, ctx.query, {raw:true});
 });
 
 router.post('/csv', koaBody, async (ctx) => {
