@@ -11,11 +11,10 @@
         "sourceType": "module"
     },
     "rules": {
-        "max-len": ["error", 120],
+        "max-len": ["error", 180],
         "no-tabs": 0,
         "require-jsdoc" : 0,
-        "no-invalid-this" : 0
-
-
-    }
+        "no-invalid-this" : 0,
+        "no-mixed-spaces-and-tabs": [2, "smart-tabs"]
+        }
 }
