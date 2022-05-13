@@ -1,14 +1,16 @@
-const notion = require('./index.js')
+const notion = require('../index_bkp.js');
 
 const deepClone = ((obj) => {
   return JSON.parse(JSON.stringify(obj));
 });
 
+global.notionCache = {};
 
 const getPageTitle = (entry) => {
   // doesn't work if string is empty
   // const [, {title: [{plain_text}]}] = Object.entries(properties).find(([, value]) => value.id == 'title');
 
+  // console.log('PRPS ', entry.properties, ' PROPS END');
   // get title
   const [titleKey, titleObject] = Object.entries(entry.properties).find(([, value]) => {
     return value.id == 'title';
@@ -20,6 +22,10 @@ const getPageTitle = (entry) => {
   return entry;
 };
 
+// TODO: #9 implement cache system, object with id as index
+
+const cache = {};
+
 const getPageRelations = async ({properties}) => {
   _properties = deepClone(Object.entries(properties).filter(([, property])=> {
     return property.type=='relation';
@@ -30,18 +36,32 @@ const getPageRelations = async ({properties}) => {
     properties[key].relation = [];
     delete properties[key].id;
     // console.log(property);
-    for (const relation of property.relation) {
+    for (const {id} of property.relation) {
       // console.log(relation);
-      const {title} = getPageTitle(await notion.retrievePage({id: relation.id}));
-      const x = {
+      // console.log(global.notionCache[id]);
+      console.log('CACHE ', cache[id]);
+      cache[id] = await notion.retrievePage({id});
+
+      // console.log('ONE ', cache[id]);
+
+      // const relationPage = await notion.retrievePage({id});
+      // console.log('LMAO ', relationPage);
+
+      const {title} = await getPageTitle({...cache[id]});
+      /* const x = {
         title,
         id: properties[key].id,
-      };
+      }; */
       // console.log(title)
       properties[key].relation.push(title);
+      // properties[key].data
     }
+    console.log('CACHE ', cache);
+    return;
   }
-
+  /* setTimeout(() => {
+    global.notionCache = {};
+  }, 20000); */
   // console.log(properties);
   return properties;
 };
@@ -49,14 +69,14 @@ const getPageRelations = async ({properties}) => {
 /**
  * Changes output in a more readable and consumable way
  *
- * @param {entry} Notion page 
- * @param {relationBool} boolean ? add the page title to relation properties (has only id by default) : nothing 
+ * @param {entry} Notion page
+ * @param {relationBool} boolean ? add the page title to relation properties (has only id by default) : nothing
  * @return {entry} entry refined
  */
 
 const refinePage = async (entry, options) => {
   entry = getPageTitle(entry);
-	entry.properties = options.getPageRelations ? await getPageRelations(entry) : entry.properties;
+  entry.properties = options.getPageRelations ? await getPageRelations(entry) : entry.properties;
   // console.log('ENTREE', entry);
   return entry;
 };
@@ -83,9 +103,9 @@ const refineEntry = async (entry, options) => {
 };
 
 module.exports = async (data, options = {}) => {
-	if(options.raw){
-		return data
-	}
+  if (options.raw) {
+    return data;
+  }
   // console.log(data);
   if (data.object == 'list') {
     _data = [];

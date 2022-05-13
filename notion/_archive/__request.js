@@ -10,7 +10,6 @@ exports.searchDb = async (query = '') => {
       property: 'object',
     },
   });
-
   console.log(response);
   return response;
 };
@@ -33,4 +32,3 @@ exports.getPage = getPage = async (id) => {
   const response = await notion.pages.retrieve({page_id: id});
   return response;
 };
-

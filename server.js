@@ -10,25 +10,21 @@ const router = new Router();
 app.use(cors());
 app.use(helmet());
 
-const notion = require('./notion/');
+const notion = require('./notion');
 
-const { createReadStream } = require('fs')
+const {createReadStream} = require('fs');
 
 router.get('/graph', (ctx) => {
-ctx.type = 'html';
-    ctx.body = createReadStream('./d3networkgraph/graph.html');
+  ctx.type = 'html';
+  ctx.body = createReadStream('./d3networkgraph/graph.html');
 });
 
 router.get('/graph2', (ctx) => {
-ctx.type = 'html';
-    ctx.body = createReadStream('./d3networkgraph/graph2.html');
+  ctx.type = 'html';
+  ctx.body = createReadStream('./d3networkgraph/graph2.html');
 });
 
 router.get('/', (ctx) => {
-  ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
-});
-
-router.get('/aa', (ctx) => {
   ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
 });
 
@@ -69,6 +65,13 @@ function parseCsv(filePath) {
   });
 }
 
+router.get('/notion/:dataType', async (ctx) => {
+  const {dataType} = ctx.params;
+  const x = await notion.get(dataType, ctx.query);
+  // console.log('AT SERVER.JS ', x);
+  ctx.response.body = x;
+});
+
 router.get('/notion/sync', async (ctx) => {
   ctx.response.body = await notion.advanced.sync();
 });
@@ -82,6 +85,14 @@ router.get('/notion/addSelectOption', async (ctx) => {
   ctx.response.body = await notion.advanced.addSelectOption(ctx.query);
 });
 
+router.post('/notion/hierarchyPlatform', async (ctx) => {
+  ctx.response.body = await notion.advanced.hierarchyPlatform(ctx.query);
+});
+
+router.post('/notion/formulaTitle', async (ctx) => {
+  ctx.response.body = await notion.advanced.formulaTitle(ctx.query);
+});
+
 router.get('/notion/makeHierarchy', async (ctx) => {
   ctx.response.body = await notion.advanced.makeHierarchy(ctx.query);
 });
@@ -90,18 +101,8 @@ router.get('/notion/formatPage', async (ctx) => {
   ctx.response.body = await notion.advanced.formatPage(ctx.query);
 });
 
-router.get('/testquery', ctx => {
-	ctx.response.body = ctx.params
-})
-
-router.get('/notion/:functionName', async (ctx) => {
-	const {functionName} = ctx.params;
-  ctx.response.body = await notion.request(functionName, ctx.query);
-});
-
-router.get('/notion/raw/:functionName', async (ctx) => {
-	const {functionName} = ctx.params;
-  ctx.response.body = await notion.request(functionName, ctx.query, {raw:true});
+router.get('/testquery', (ctx) => {
+  ctx.response.body = ctx.params;
 });
 
 router.post('/csv', koaBody, async (ctx) => {

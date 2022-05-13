@@ -1,0 +1,2343 @@
+[
+    {
+        "object": "page",
+        "id": "670840fe-f927-4672-b017-cad07d832878",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [
+                        {
+                            "type": "rich_text",
+                            "rich_text": [
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "cc17847c-3994-4de6-8386-9191cca0f9f3"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "Browser",
+                                    "href": "https://www.notion.so/cc17847c39944de683869191cca0f9f3"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " \n",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " \n",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "48a4a7dd-fa98-4b71-90a5-5c6b42ecbf1d"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "MacOS",
+                                    "href": "https://www.notion.so/48a4a7ddfa984b7190a55c6b42ecbf1d"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " \n",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " \n",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "2d207a86-0a45-451b-b614-0ebfe036d1a9"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "Windows",
+                                    "href": "https://www.notion.so/2d207a860a45451bb6140ebfe036d1a9"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " ",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " ",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "cc17847c-3994-4de6-8386-9191cca0f9f3"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "Browser",
+                                    "href": "https://www.notion.so/cc17847c39944de683869191cca0f9f3"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " ",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " ",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "cc17847c-3994-4de6-8386-9191cca0f9f3"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "Browser",
+                                    "href": "https://www.notion.so/cc17847c39944de683869191cca0f9f3"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " \n",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " \n",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "48a4a7dd-fa98-4b71-90a5-5c6b42ecbf1d"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "MacOS",
+                                    "href": "https://www.notion.so/48a4a7ddfa984b7190a55c6b42ecbf1d"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " ",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " ",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "48a4a7dd-fa98-4b71-90a5-5c6b42ecbf1d"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "MacOS",
+                                    "href": "https://www.notion.so/48a4a7ddfa984b7190a55c6b42ecbf1d"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " ",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " ",
+                                    "href": null
+                                }
+                            ]
+                        }
+                    ],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": 1.88
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "Paid"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "Plus",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "Plus",
+                        "href": null
+                    }
+                ]
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "bcb8326a-d3e1-4ea6-9190-642c3141707e",
+                        "title": "Pocket Casts Plus | Worldwide (Paid) (Browser MacOS Windows)"
+                    },
+                    {
+                        "id": "fd47eb87-2881-414a-8ba1-e66a441b2244",
+                        "title": "Pocket Casts Plus | Worldwide (Paid) (Browser)"
+                    },
+                    {
+                        "id": "cc10122d-66f1-4b59-b7b5-2dcbeedfcdb9",
+                        "title": "Pocket Casts Plus | Worldwide (Paid) (Browser MacOS)"
+                    },
+                    {
+                        "id": "edc517e5-f938-4d15-93f5-b700f57e1a93",
+                        "title": "Pocket Casts Plus | Worldwide (Paid) (MacOS)"
+                    }
+                ]
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "e6541f67-73e6-4227-823f-8078c4b22254",
+                        "title": "Pocket Casts"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Pocket-Casts-Plus-Worldwide-Paid-670840fef9274672b017cad07d832878",
+        "title": "Pocket Casts Plus | Worldwide (Paid)"
+    },
+    {
+        "object": "page",
+        "id": "a32089bd-1de1-41c3-aad5-3d09f0ea36bc",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": 0
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "Free"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": []
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "995db91f-1456-4b19-a9ca-0cd4ba8686da",
+                        "title": "Podurama"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Podurama-Worldwide-Free-a32089bd1de141c3aad53d09f0ea36bc",
+        "title": "Podurama | Worldwide (Free)"
+    },
+    {
+        "object": "page",
+        "id": "6bb12300-b61c-4211-9fb1-663224dcca2f",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": null
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "?"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": []
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "75c3298f-f8cd-4c04-a6ec-a0395349d3db",
+                        "title": "Stitcher"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Stitcher-Worldwide-6bb12300b61c42119fb1663224dcca2f",
+        "title": "Stitcher | Worldwide (?)"
+    },
+    {
+        "object": "page",
+        "id": "122fddf9-a0ce-43f7-bad8-3ed0d00ee8ad",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [
+                        {
+                            "type": "rich_text",
+                            "rich_text": [
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "26810aca-f69d-4c87-ab03-7b85aa693059"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "Android",
+                                    "href": "https://www.notion.so/26810acaf69d4c87ab037b85aa693059"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " \n",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " \n",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "b79b4cc9-0865-4e8d-a2ec-3d784c2ad26d"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "iOS",
+                                    "href": "https://www.notion.so/b79b4cc908654e8da2ec3d784c2ad26d"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " ",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " ",
+                                    "href": null
+                                }
+                            ]
+                        }
+                    ],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": 0
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "Free"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "f81542ec-1c25-4c59-89c4-4e008f6d1b8e",
+                        "title": "Audible | Worldwide (Free) (Android iOS)"
+                    }
+                ]
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "a85922da-385c-419e-893a-92320f4b9998",
+                        "title": "Audible"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Audible-Worldwide-Free-122fddf9a0ce43f7bad83ed0d00ee8ad",
+        "title": "Audible | Worldwide (Free)"
+    },
+    {
+        "object": "page",
+        "id": "16cba135-1129-485f-bc5f-2b54578c7ff5",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [
+                        {
+                            "type": "rich_text",
+                            "rich_text": [
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "26810aca-f69d-4c87-ab03-7b85aa693059"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "Android",
+                                    "href": "https://www.notion.so/26810acaf69d4c87ab037b85aa693059"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " \n",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " \n",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "b79b4cc9-0865-4e8d-a2ec-3d784c2ad26d"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "iOS",
+                                    "href": "https://www.notion.so/b79b4cc908654e8da2ec3d784c2ad26d"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " ",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " ",
+                                    "href": null
+                                }
+                            ]
+                        }
+                    ],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": 14.95
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "Paid"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "Premium",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "Premium",
+                        "href": null
+                    }
+                ]
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59064f4e-f8f8-4d07-8f1d-019308d3119b",
+                        "title": "United States of America"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "81202f18-1d67-4a46-a09d-59a507dbea5c",
+                        "title": "Audible Premium | United States of America (Paid) (Android iOS)"
+                    }
+                ]
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "a85922da-385c-419e-893a-92320f4b9998",
+                        "title": "Audible"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Audible-Premium-United-States-of-America-Paid-16cba1351129485fbc5f2b54578c7ff5",
+        "title": "Audible Premium | United States of America (Paid)"
+    },
+    {
+        "object": "page",
+        "id": "450972bc-ce0b-4c33-96f2-2f352a63cb7d",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": 0
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "Free"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "8273a894-9591-49c3-b18c-f0eab15807ba",
+                        "title": "Italy"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": []
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "a85922da-385c-419e-893a-92320f4b9998",
+                        "title": "Audible"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Audible-Italy-Free-450972bcce0b4c3396f22f352a63cb7d",
+        "title": "Audible | Italy (Free)"
+    },
+    {
+        "object": "page",
+        "id": "796d4b0f-7520-4ccb-a7a2-d81413a33591",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": null
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "?"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": []
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "c7bcfa4a-b3ea-4a73-8a45-09785a43d7ee",
+                        "title": "Apple Podcast"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Apple-Podcast-Worldwide-796d4b0f75204ccba7a2d81413a33591",
+        "title": "Apple Podcast | Worldwide (?)"
+    },
+    {
+        "object": "page",
+        "id": "cb9cef1d-1f42-42ae-b6be-f5d5ee9a3fb6",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": null
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "?"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": []
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "614d0639-b492-4dc3-aca5-ab6b19a84868",
+                        "title": "Podverse"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Podverse-Worldwide-cb9cef1d1f4242aeb6bef5d5ee9a3fb6",
+        "title": "Podverse | Worldwide (?)"
+    },
+    {
+        "object": "page",
+        "id": "e90b531c-576d-4aaa-8413-67cb511f737d",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": 9.99
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "Paid"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "8273a894-9591-49c3-b18c-f0eab15807ba",
+                        "title": "Italy"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": []
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "a85922da-385c-419e-893a-92320f4b9998",
+                        "title": "Audible"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Audible-Italy-Paid-e90b531c576d4aaa841367cb511f737d",
+        "title": "Audible | Italy (Paid)"
+    },
+    {
+        "object": "page",
+        "id": "09502b62-b09a-4b5a-8da4-99bfa5f383c2",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": null
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "?"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": []
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "a995eeb1-b392-46a0-a219-9b1e0957c231",
+                        "title": "Spotify"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Spotify-Worldwide-09502b62b09a4b5a8da499bfa5f383c2",
+        "title": "Spotify | Worldwide (?)"
+    },
+    {
+        "object": "page",
+        "id": "192db4ec-3c22-4e3a-82c8-bf4773aa691d",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [
+                        {
+                            "type": "rich_text",
+                            "rich_text": [
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "26810aca-f69d-4c87-ab03-7b85aa693059"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "Android",
+                                    "href": "https://www.notion.so/26810acaf69d4c87ab037b85aa693059"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " \n",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " \n",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "b79b4cc9-0865-4e8d-a2ec-3d784c2ad26d"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "iOS",
+                                    "href": "https://www.notion.so/b79b4cc908654e8da2ec3d784c2ad26d"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " ",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " ",
+                                    "href": null
+                                }
+                            ]
+                        }
+                    ],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": 0
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "Free"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "eab82f0c-4458-4992-bc3c-275aa341bad6",
+                        "title": "Pocket Casts | Worldwide (Free) (Android iOS)"
+                    }
+                ]
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "e6541f67-73e6-4227-823f-8078c4b22254",
+                        "title": "Pocket Casts"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Pocket-Casts-Worldwide-Free-192db4ec3c224e3a82c8bf4773aa691d",
+        "title": "Pocket Casts | Worldwide (Free)"
+    },
+    {
+        "object": "page",
+        "id": "32170ece-a573-438c-8594-01c6856cd581",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [
+                        {
+                            "type": "rich_text",
+                            "rich_text": [
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "26810aca-f69d-4c87-ab03-7b85aa693059"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "Android",
+                                    "href": "https://www.notion.so/26810acaf69d4c87ab037b85aa693059"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " \n",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " \n",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "b79b4cc9-0865-4e8d-a2ec-3d784c2ad26d"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "iOS",
+                                    "href": "https://www.notion.so/b79b4cc908654e8da2ec3d784c2ad26d"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " ",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " ",
+                                    "href": null
+                                }
+                            ]
+                        }
+                    ],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": 1
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "Paid"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "~",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "~",
+                        "href": null
+                    }
+                ]
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "253f18b0-1e6b-459e-96ea-d690e1839418",
+                        "title": "Audible | Worldwide (Paid) (Android iOS)"
+                    }
+                ]
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "a85922da-385c-419e-893a-92320f4b9998",
+                        "title": "Audible"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Audible-Worldwide-Paid-32170ecea573438c859401c6856cd581",
+        "title": "Audible | Worldwide (Paid)"
+    },
+    {
+        "object": "page",
+        "id": "79d13415-c054-4f16-9928-a44f8161289d",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": null
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "?"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": []
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "43084802-1a42-4e5a-857e-6ef24f52efc3",
+                        "title": "Google Podcast"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Google-Podcast-Worldwide-79d13415c0544f169928a44f8161289d",
+        "title": "Google Podcast | Worldwide (?)"
+    },
+    {
+        "object": "page",
+        "id": "7a941f56-a0f8-45d3-af29-a885d37318ca",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [
+                        {
+                            "type": "rich_text",
+                            "rich_text": [
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "26810aca-f69d-4c87-ab03-7b85aa693059"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "Android",
+                                    "href": "https://www.notion.so/26810acaf69d4c87ab037b85aa693059"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " \n",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " \n",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "b79b4cc9-0865-4e8d-a2ec-3d784c2ad26d"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "iOS",
+                                    "href": "https://www.notion.so/b79b4cc908654e8da2ec3d784c2ad26d"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " ",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " ",
+                                    "href": null
+                                }
+                            ]
+                        }
+                    ],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": 0
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "Free"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59064f4e-f8f8-4d07-8f1d-019308d3119b",
+                        "title": "United States of America"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "8893412d-4e93-4ead-ab4c-bb9b4af1ae07",
+                        "title": "Audible | United States of America (Free) (Android iOS)"
+                    }
+                ]
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "a85922da-385c-419e-893a-92320f4b9998",
+                        "title": "Audible"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Audible-United-States-of-America-Free-7a941f56a0f845d3af29a885d37318ca",
+        "title": "Audible | United States of America (Free)"
+    },
+    {
+        "object": "page",
+        "id": "d170e797-effd-4cd8-bfc8-f939e3896e6a",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": null
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "?"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": []
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "2d09d67b-60e9-4b92-b6d3-12856deda1f1",
+                        "title": "CogX"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/CogX-Worldwide-d170e797effd4cd8bfc8f939e3896e6a",
+        "title": "CogX | Worldwide (?)"
+    },
+    {
+        "object": "page",
+        "id": "a0832ba8-6e1d-4315-9395-e3d66572e726",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": null
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "?"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59342560-2073-437f-87ca-ad085cba61ce",
+                        "title": "Worldwide"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": []
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "80b954b8-605d-4bc4-b306-571321b1f48a",
+                        "title": "TuneIn "
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/TuneIn-Worldwide-a0832ba86e1d43159395e3d66572e726",
+        "title": "TuneIn | Worldwide (?)"
+    },
+    {
+        "object": "page",
+        "id": "b0ba58d1-9677-4de9-af11-93cbe3156ea2",
+        "properties": {
+            "Platform": {
+                "id": "FeU_",
+                "type": "rollup",
+                "rollup": {
+                    "type": "array",
+                    "array": [
+                        {
+                            "type": "rich_text",
+                            "rich_text": [
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "26810aca-f69d-4c87-ab03-7b85aa693059"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "Android",
+                                    "href": "https://www.notion.so/26810acaf69d4c87ab037b85aa693059"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " \n",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " \n",
+                                    "href": null
+                                },
+                                {
+                                    "type": "mention",
+                                    "mention": {
+                                        "type": "page",
+                                        "page": {
+                                            "id": "b79b4cc9-0865-4e8d-a2ec-3d784c2ad26d"
+                                        }
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": "iOS",
+                                    "href": "https://www.notion.so/b79b4cc908654e8da2ec3d784c2ad26d"
+                                },
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": " ",
+                                        "link": null
+                                    },
+                                    "annotations": {
+                                        "bold": false,
+                                        "italic": false,
+                                        "strikethrough": false,
+                                        "underline": false,
+                                        "code": false,
+                                        "color": "default"
+                                    },
+                                    "plain_text": " ",
+                                    "href": null
+                                }
+                            ]
+                        }
+                    ],
+                    "function": "show_original"
+                }
+            },
+            "Price per Month": {
+                "id": "JLbN",
+                "type": "number",
+                "number": 7.95
+            },
+            "Price": {
+                "id": "O%3Ea%40",
+                "type": "formula",
+                "formula": {
+                    "type": "string",
+                    "string": "Paid"
+                }
+            },
+            "${Index}": {
+                "id": "T%60jw",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "${Software} ${Naming} | ${Country} (${Price})",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "${Software} ${Naming} | ${Country} (${Price})",
+                        "href": null
+                    }
+                ]
+            },
+            "Naming": {
+                "id": "%5BqPf",
+                "type": "rich_text",
+                "rich_text": [
+                    {
+                        "type": "text",
+                        "text": {
+                            "content": "Plus",
+                            "link": null
+                        },
+                        "annotations": {
+                            "bold": false,
+                            "italic": false,
+                            "strikethrough": false,
+                            "underline": false,
+                            "code": false,
+                            "color": "default"
+                        },
+                        "plain_text": "Plus",
+                        "href": null
+                    }
+                ]
+            },
+            "Currency": {
+                "id": "aG_%7B",
+                "type": "rich_text",
+                "rich_text": []
+            },
+            "Country": {
+                "id": "jM%7BY",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "59064f4e-f8f8-4d07-8f1d-019308d3119b",
+                        "title": "United States of America"
+                    }
+                ]
+            },
+            "_Platform": {
+                "id": "opWo",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "dbf86e8b-ecf8-459c-9a48-443ed04d725b",
+                        "title": "Audible Plus | United States of America (Paid) (Android iOS)"
+                    }
+                ]
+            },
+            "Software": {
+                "id": "v%3AWZ",
+                "type": "relation",
+                "relation": [
+                    {
+                        "id": "a85922da-385c-419e-893a-92320f4b9998",
+                        "title": "Audible"
+                    }
+                ]
+            }
+        },
+        "url": "https://www.notion.so/Audible-Plus-United-States-of-America-Paid-b0ba58d196774de9af1193cbe3156ea2",
+        "title": "Audible Plus | United States of America (Paid)"
+    }
+]

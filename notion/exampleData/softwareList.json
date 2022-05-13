@@ -1,0 +1,353 @@
+{
+    "Pocket Casts": {
+        "Worldwide": [
+            {}
+        ]
+    },
+    "Podurama": {
+        "Worldwide": [
+            {}
+        ]
+    },
+    "Stitcher": {
+        "Worldwide": [
+            {}
+        ]
+    },
+    "Audible": {
+        "Worldwide": [
+            {
+                "Android-iOS": {
+                    "Export OPML": {
+                        "id": "%3Av~h",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Dark Mode": {
+                        "id": "%3C%3AoT",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Save to Library": {
+                        "id": "FLqo",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Sleep Timer": {
+                        "id": "HBA%60",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Auto-Download": {
+                        "id": "Q%3Cxc",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Queue Episodes": {
+                        "id": "YDxS",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Notes on Episode": {
+                        "id": "%5B%3ER%5B",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Speed Up": {
+                        "id": "%60She",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Connect with Others": {
+                        "id": "bfKT",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Trim Silence": {
+                        "id": "eSKF",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Ad-Free": {
+                        "id": "eUkd",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Notes on Episode at specific time": {
+                        "id": "pWaI",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Reviews": {
+                        "id": "sqqQ",
+                        "type": "select",
+                        "select": null
+                    },
+                    "_Export Data": {
+                        "id": "c1d42d59-3506-4b97-b5e6-09106dd520e4",
+                        "type": "rich_text",
+                        "rich_text": []
+                    }
+                }
+            },
+            {
+                "Android-iOS": {
+                    "Export OPML": {
+                        "id": "%3Av~h",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Dark Mode": {
+                        "id": "%3C%3AoT",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Save to Library": {
+                        "id": "FLqo",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Sleep Timer": {
+                        "id": "HBA%60",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Auto-Download": {
+                        "id": "Q%3Cxc",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Queue Episodes": {
+                        "id": "YDxS",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Notes on Episode": {
+                        "id": "%5B%3ER%5B",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Speed Up": {
+                        "id": "%60She",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Connect with Others": {
+                        "id": "bfKT",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Trim Silence": {
+                        "id": "eSKF",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Ad-Free": {
+                        "id": "eUkd",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Notes on Episode at specific time": {
+                        "id": "pWaI",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Reviews": {
+                        "id": "sqqQ",
+                        "type": "select",
+                        "select": null
+                    },
+                    "_Export Data": {
+                        "id": "c1d42d59-3506-4b97-b5e6-09106dd520e4",
+                        "type": "rich_text",
+                        "rich_text": []
+                    }
+                }
+            }
+        ],
+        "United States of America": [
+            {
+                "Android-iOS": {
+                    "Export OPML": {
+                        "id": "%3Av~h",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Dark Mode": {
+                        "id": "%3C%3AoT",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Save to Library": {
+                        "id": "FLqo",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Sleep Timer": {
+                        "id": "HBA%60",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Auto-Download": {
+                        "id": "Q%3Cxc",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Queue Episodes": {
+                        "id": "YDxS",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Notes on Episode": {
+                        "id": "%5B%3ER%5B",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Speed Up": {
+                        "id": "%60She",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Connect with Others": {
+                        "id": "bfKT",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Trim Silence": {
+                        "id": "eSKF",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Ad-Free": {
+                        "id": "eUkd",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Notes on Episode at specific time": {
+                        "id": "pWaI",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Reviews": {
+                        "id": "sqqQ",
+                        "type": "select",
+                        "select": null
+                    },
+                    "_Export Data": {
+                        "id": "c1d42d59-3506-4b97-b5e6-09106dd520e4",
+                        "type": "rich_text",
+                        "rich_text": []
+                    }
+                }
+            },
+            {
+                "Android-iOS": {
+                    "Export OPML": {
+                        "id": "%3Av~h",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Dark Mode": {
+                        "id": "%3C%3AoT",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Save to Library": {
+                        "id": "FLqo",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Sleep Timer": {
+                        "id": "HBA%60",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Auto-Download": {
+                        "id": "Q%3Cxc",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Queue Episodes": {
+                        "id": "YDxS",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Notes on Episode": {
+                        "id": "%5B%3ER%5B",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Speed Up": {
+                        "id": "%60She",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Connect with Others": {
+                        "id": "bfKT",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Trim Silence": {
+                        "id": "eSKF",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Ad-Free": {
+                        "id": "eUkd",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Notes on Episode at specific time": {
+                        "id": "pWaI",
+                        "type": "select",
+                        "select": null
+                    },
+                    "Reviews": {
+                        "id": "sqqQ",
+                        "type": "select",
+                        "select": null
+                    },
+                    "_Export Data": {
+                        "id": "c1d42d59-3506-4b97-b5e6-09106dd520e4",
+                        "type": "rich_text",
+                        "rich_text": []
+                    }
+                }
+            }
+        ],
+        "Italy": [
+            {},
+            {}
+        ]
+    },
+    "Apple Podcast": {
+        "Worldwide": [
+            {}
+        ]
+    },
+    "Podverse": {
+        "Worldwide": [
+            {}
+        ]
+    },
+    "Spotify": {
+        "Worldwide": [
+            {}
+        ]
+    },
+    "Google Podcast": {
+        "Worldwide": [
+            {}
+        ]
+    },
+    "CogX": {
+        "Worldwide": [
+            {}
+        ]
+    },
+    "TuneIn ": {
+        "Worldwide": [
+            {}
+        ]
+    }
+}
