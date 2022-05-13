@@ -108,120 +108,96 @@ module.exports = async ({id}) => {
   // const pageUpdate = [];
 
   Object.entries(softwareList).forEach(([s, country]) => {
-    if (s == 'Pocket Casts') {
-      console.log('- - - SOFTWARE ', s);
-      Object.entries(country).forEach(([c, pricingPlan]) => {
-        console.log('- - COUNTRY ', c);
+    console.log('- - - SOFTWARE ', s);
+    Object.entries(country).forEach(([c, pricingPlan]) => {
+      console.log('- - COUNTRY ', c);
 
-        // console.log(cV);
+      // console.log(cV);
 
-        // pricingPlan array with platforms as objects
-        pricingPlan.forEach( (platforms, i) => {
-          // pricingPlan.platforms array with platforms as array of objects (to sort platforms)
-          pricingPlan.platforms = pricingPlan.platforms || [];
-          // console.log(platforms);
-          console.log('- PRICE ', i);
+      // pricingPlan array with platforms as objects
+      // ex. [{Android:{...}, iOS:{...}}]
+      pricingPlan.forEach( (platforms, i) => {
+        // pricingPlan.platforms array with platforms as array of objects (to sort platforms)
+        // ex. [[Android, {...}, [iOS, {...}]]]
+        pricingPlan.platforms = pricingPlan.platforms || [];
+        // console.log(platforms);
+        console.log('- PRICE ', i);
 
-          // console.log(ppV);
+        pricingPlan.platforms[i] = Object.entries(platforms);
+        // console.log(pricingPlan.platforms[i][0]);
 
-          // console.log('OBJECT ', pp);
+        pricingPlan.platforms[i].sort((a, b) => {
+          aa = (a[0].match(/-/g)||[]).length;
+          bb = (b[0].match(/-/g)||[]).length;
+          return bb-aa;
+        });
+        pricingPlan.platforms[i].forEach(([p, properties], pi) => { // platformIndex
+          console.log('- ', p);
 
-          // fix here
-          // console.log(pricingPlan[i]);
-          pricingPlan.platforms[i] = Object.entries(platforms);
-          // console.log(pricingPlan.platforms[i][0]);
-          // console.log('ARRAY ', platforms);
+          Object.entries(properties).forEach(([propertyName, property]) => {
+            if (property.type != 'select') {
+              return;
+            }
+            const childSelect = property.select?.name;
 
-          pricingPlan.platforms[i].sort((a, b) => {
-            aa = (a[0].match(/-/g)||[]).length;
-            bb = (b[0].match(/-/g)||[]).length;
-            return bb-aa;
-          });
-
-          // console.log(platforms);
-
-          pricingPlan.platforms[i].forEach(([p, properties], pi) => { // platformIndex
-            // console.log('pV ', pV);
-            console.log('- ', p);
-            // sort by specificity -> every platform inherits from platform[0]
-
-            Object.entries(properties).forEach(([propertyName, childV]) => {
-            // pV[0] inherits from pp[i-1] -> pV[0]
-            // pV[1] inherits form pV[0] and pp[i-1] -> pV[1]
-
-              // matching select from previous pricing plan - same platform
-              // console.log(cV?.[i - 1]?.[p]?.[propertyName]?.select);
-              // matching select from current pricing plan - default platform (index position 0)
-              // console.log(platforms?.[0]?.[1]?.[propertyName]?.select);
-              //
-              // console.log(sV?.[c != 'Worldwide' ? 'Worldwide' : null]?.[i]?.[p]?.[propertyName].select);
-
-              if (childV.type != 'select') {
-                return;
-              }
-              const childSelect = childV.select?.name;
-
-              // console.log(platforms?.[0]?.[1]?.[propertyName]?.select);
-              if (propertyName == 'Ad-Free') {
-                console.log(propertyName, ' ', p );
+            // console.log(platforms?.[0]?.[1]?.[propertyName]?.select);
+            console.log(propertyName, ' ', p );
 
 
-                // default from worldwide
-                const w = country?.[c != 'Worldwide' ? 'Worldwide' : undefined]?.[i]?.[p]?.[propertyName]?.select?.name.replace('∇', '');
+            // default from worldwide
+            const w = country?.[c != 'Worldwide' ? 'Worldwide' : undefined]?.[i]?.[p]?.[propertyName]?.select?.name.replace('∇', '');
 
-                let x;
-                if (pi==0) {
-                  // console.log('hallo ', pricingPlan?.platforms?.[i-1]?.[0]?.[1]);
-                  // default for previous pricing plan
-                  x = pricingPlan?.platforms?.[i - 1]?.[0]?.[1]?.[propertyName]?.select?.name.replace('∇', '');
-                  console.log(x);
-                }
+            let x;
+            if (pi==0) {
+              // console.log('hallo ', pricingPlan?.platforms?.[i-1]?.[0]?.[1]);
+              // default for previous pricing plan
+              x = pricingPlan?.platforms?.[i - 1]?.[0]?.[1]?.[propertyName]?.select?.name.replace('∇', '');
+              console.log(x);
+            }
 
-                // same platform from previous pricing plan
-                const y = pricingPlan?.[i-1]?.[p]?.[propertyName]?.select?.name.replace('∇', '');
+            // same platform from previous pricing plan
+            const y = pricingPlan?.[i-1]?.[p]?.[propertyName]?.select?.name.replace('∇', '');
 
-                // default for current pricing plan
-                // console.log('blep ', pricingPlan.platforms[i][0][1]);
-                const z = pricingPlan.platforms?.[i]?.[0]?.[1]?.[propertyName]?.select?.name.replace('∇', '');
+            // default for current pricing plan
+            // console.log('blep ', pricingPlan.platforms[i][0][1]);
+            const z = pricingPlan.platforms?.[i]?.[0]?.[1]?.[propertyName]?.select?.name.replace('∇', '');
 
-                /* console.log('x ', x);
+            /* console.log('x ', x);
               console.log('y ', y);
               console.log('z ', z); */
-                parentSelect = x || y || w || z;
-                // console.log(parentSelect);
+            parentSelect = x || y || w || z;
+            // console.log(parentSelect);
 
-                if (!childSelect || (childSelect.includes('∇') && !childSelect.includes(parentSelect))) {
-                  // need the updated properties for the next iteration, but also for updating the Notion DB
-                  // can't update properties individually
-                  if (parentSelect == '✓') {
-                    pricingPlan[i][p][propertyName].select = {
-                      name: '∇' + parentSelect,
-                    };
+            if (!childSelect || (childSelect.includes('∇') && !childSelect.includes(parentSelect))) {
+              // need the updated properties for the next iteration, but also for updating the Notion DB
+              // can't update properties individually
+              if (parentSelect == '✓') {
+                pricingPlan[i][p][propertyName].select = {
+                  name: '∇' + parentSelect,
+                };
 
-                    // console.log('platforms parent ', pricingPlan.platforms[i][pi][1][propertyName]);
+                // console.log('platforms parent ', pricingPlan.platforms[i][pi][1][propertyName]);
 
-                    pricingPlan.platforms[i][pi][1][propertyName].select = {
-                      name: '∇' + parentSelect,
-                    };
+                pricingPlan.platforms[i][pi][1][propertyName].select = {
+                  name: '∇' + parentSelect,
+                };
 
-                    /* cV[i].properties[propertyName].select = {
+                /* cV[i].properties[propertyName].select = {
                       name: '∇' + parentSelect,
                     }; */
-                  } else {
-                    pricingPlan[i][p][propertyName].select = null;
-                    pricingPlan.platforms[i][pi][1][propertyName].select = null;
-                    // if it has no property to update from and has not been set individually, set to null
-                    // cV[i].properties[propertyName].select = null;
-                  }
-                } else {
-                  return;
-                }
+              } else {
+                pricingPlan[i][p][propertyName].select = null;
+                pricingPlan.platforms[i][pi][1][propertyName].select = null;
+                // if it has no property to update from and has not been set individually, set to null
+                // cV[i].properties[propertyName].select = null;
               }
-            });
+            } else {
+              return;
+            }
           });
         });
       });
-    }
+    });
   });
 
   /* pageUpdate.properties[propertyName] = {
@@ -236,7 +212,21 @@ module.exports = async ({id}) => {
       select: null,
     }; */
 
-  Object.entries(softwareList).forEach(([s, country]) => {
+  for (const [s, country] of Object.entries(softwareList)) {
+    console.log('- - - Software ', s);
+    for (const [c, pricingPlan] of Object.entries(country)) {
+      console.log('- - Country ', c );
+      for (const platforms of pricingPlan) {
+        for (const [, properties] of Object.entries(platforms)) {
+          const id = properties.id;
+          delete properties.id;
+          await update('page', {id, properties});
+        }
+      }
+    }
+  }
+
+  /* Object.entries(softwareList).forEach(([s, country]) => {
     console.log('- - - Software ', s);
     Object.entries(country).forEach(([c, pricingPlan]) => {
       console.log('- - - Country ', c );
@@ -248,7 +238,7 @@ module.exports = async ({id}) => {
         });
       });
     });
-  });
+  }); */
 
 
   // console.log(softwareList)
