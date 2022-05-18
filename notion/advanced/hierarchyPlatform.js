@@ -2,6 +2,16 @@ const get = require('../get');
 const update = require('../update');
 const pages = require('../exampleData/podcastForHierarchy.json');
 
+class RichText {
+  static plainText(richText) {
+    let plainText = '';
+    richText.forEach((text) => {
+      plainText += ' ' + text.plain_text;
+    });
+    return plainText.trim();
+  }
+}
+
 module.exports = async ({id}) => {
   // const pages = await get('pages', {id, formatRelations: true});
 
@@ -44,6 +54,14 @@ module.exports = async ({id}) => {
         const index = parseInt(page.properties['Price per Month'].number || 0);
         s == 'Pocket Casts' ? console.log(index) : '';
         softwareList[s][c][index] = softwareList[s][c][index] || {};
+        // save price data in softwareList
+        Object.defineProperty(softwareList[s][c][index], 'info', {
+          value: {
+            price: page.properties['Price per Month'].number,
+            naming: RichText.plainText(page.properties.Naming.rich_text),
+          },
+          enumerable: false,
+        });
         // console.log(index);
         for (const {id} of page.properties._Platform.relation) {
           // console.log('p');
@@ -121,7 +139,7 @@ module.exports = async ({id}) => {
         // ex. [[Android, {...}, [iOS, {...}]]]
         pricingPlan.platforms = pricingPlan.platforms || [];
         // console.log(platforms);
-        console.log('- PRICE ', i);
+        // console.log('- PRICE ', i);
 
         pricingPlan.platforms[i] = Object.entries(platforms);
         // console.log(pricingPlan.platforms[i][0]);
@@ -213,15 +231,55 @@ module.exports = async ({id}) => {
     }; */
 
   for (const [s, country] of Object.entries(softwareList)) {
-    console.log('- - - Software ', s);
+    // console.log('- - - Software ', s);
     for (const [c, pricingPlan] of Object.entries(country)) {
-      console.log('- - Country ', c );
+      // console.log('- - Country ', c );
       for (const platforms of pricingPlan) {
         for (const [, properties] of Object.entries(platforms)) {
           const id = properties.id;
           delete properties.id;
-          await update('page', {id, properties});
+          // await update('page', {id, properties});
         }
+      }
+    }
+  }
+
+  const deepClone = ((obj) => {
+    return JSON.parse(JSON.stringify(obj));
+  });
+
+  for (const [s, country] of Object.entries(softwareList)) {
+    console.log('- - - Software ', s);
+    for (const [c, pricingPlan] of Object.entries(country)) {
+      console.log('- - Country ', c );
+      // eslint-disable-next-line guard-for-in
+      for (const i in pricingPlan) {
+        const info = pricingPlan[i].info;
+        const platforms = pricingPlan[i];
+        for (const [pl, properties] of Object.entries(platforms)) {
+          // also loops through arrays created here: pricingPlan.platforms (I think) - works nonetheless
+          // console.log('PROPS', properties);
+          for (const [pr, property] of Object.entries(properties)) {
+            console.log(softwareList[s][c][i]);
+            softwareList[s][c][i][pl][pr] = property?.select?.name.includes('✓') ? true :
+             property?.select?.name.includes('✕') ? false :
+             null;
+          }
+
+          const x = pl.split('-');
+          if (x.length>1) {
+            console.log(x);
+            x.forEach((l) => {
+              softwareList[s][c][i][l] = softwareList[s][c][i][l] || softwareList[s][c][i][pl];
+            });
+            delete softwareList[s][c][i][pl];
+          }
+        }
+        const x = deepClone(softwareList[s][c][i]);
+        softwareList[s][c][i] = {
+          ...info,
+          platforms: x,
+        };
       }
     }
   }
