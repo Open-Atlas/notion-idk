@@ -6,9 +6,11 @@ global.notion = {
 const advanced = require('./advanced');
 const get = require('./get');
 const update = require('./update');
+const create = require('./create');
 
 module.exports = {
   advanced,
   get,
   update,
+  create,
 };

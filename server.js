@@ -72,6 +72,13 @@ router.get('/notion/:dataType', async (ctx) => {
   ctx.response.body = x;
 });
 
+router.post('/notion/:dataType', koaBody, async (ctx) => {
+  const {dataType} = ctx.params;
+  const x = await notion.create(dataType, ctx.request.body);
+  // console.log('AT SERVER.JS ', x);
+  ctx.response.body = x;
+});
+
 router.get('/notion/sync', async (ctx) => {
   ctx.response.body = await notion.advanced.sync();
 });
