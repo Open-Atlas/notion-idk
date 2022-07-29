@@ -1,6 +1,7 @@
 const get = require('../get');
 const update = require('../update');
 const pages = require('../exampleData/podcastForHierarchy.json');
+let propertiesNames = [];
 
 class RichText {
   static plainText(richText) {
@@ -69,11 +70,11 @@ module.exports = async ({id}) => {
           const platformPage = await get('page', {id});
           // console.log(platformPage);
           let p = '';
-          platformPage.properties.Platform.rich_text.filter((block) => block.type=='mention')
-              .forEach((mention)=> p+= ' ' + mention.plain_text);
+          platformPage.properties.Platform.rich_text.filter((block) => block.type == 'mention')
+              .forEach((mention) => p += ' ' + mention.plain_text);
           p = p.trim().replaceAll(' ', '-');
 
-          softwareList[s][c][index][p]=formatPage(platformPage);
+          softwareList[s][c][index][p] = formatPage(platformPage);
           /* softwareList[s][c][index] = softwareList[s][c][index] && softwareList[s][c][index].length ?
                         [...softwareList[s][c][index][p], formatPage(platformPage)] :
                         [formatPage(platformPage)]; */
@@ -82,22 +83,22 @@ module.exports = async ({id}) => {
         // calculate number of mentions in title (how many platforms the entry is considering) and sort by that
 
 
-      /*   //query Platform and get data
-        // titleOfPlatform : {data}
-        anArray.push(platformData)
-        // console.log(s, " " , c)
-        // yada yada - creating softwareList[softwareName][countryName][{data}]
-        softwareList[s] = softwareList[s] || {};
-        softwareList[s][c] = softwareList[s][c] && softwareList[s][c].length ?
-                      [...softwareList[s][c], formatPage(page)] :
-                      [formatPage(page)]; */
+        /*   //query Platform and get data
+          // titleOfPlatform : {data}
+          anArray.push(platformData)
+          // console.log(s, " " , c)
+          // yada yada - creating softwareList[softwareName][countryName][{data}]
+          softwareList[s] = softwareList[s] || {};
+          softwareList[s][c] = softwareList[s][c] && softwareList[s][c].length ?
+                        [...softwareList[s][c], formatPage(page)] :
+                        [formatPage(page)]; */
       };
     };
   };
 
   // deletes empty array entries caused by using the price as index
-  Object.entries(softwareList).forEach(([s]) =>{
-    Object.entries(softwareList[s]).forEach(([c]) =>{
+  Object.entries(softwareList).forEach(([s]) => {
+    Object.entries(softwareList[s]).forEach(([c]) => {
       // console.log(c);
       // console.log(softwareList[s][c]);
       softwareList[s][c] = softwareList[s][c].filter((x) => x);
@@ -134,7 +135,7 @@ module.exports = async ({id}) => {
 
       // pricingPlan array with platforms as objects
       // ex. [{Android:{...}, iOS:{...}}]
-      pricingPlan.forEach( (platforms, i) => {
+      pricingPlan.forEach((platforms, i) => {
         // pricingPlan.platforms array with platforms as array of objects (to sort platforms)
         // ex. [[Android, {...}, [iOS, {...}]]]
         pricingPlan.platforms = pricingPlan.platforms || [];
@@ -145,9 +146,9 @@ module.exports = async ({id}) => {
         // console.log(pricingPlan.platforms[i][0]);
 
         pricingPlan.platforms[i].sort((a, b) => {
-          aa = (a[0].match(/-/g)||[]).length;
-          bb = (b[0].match(/-/g)||[]).length;
-          return bb-aa;
+          aa = (a[0].match(/-/g) || []).length;
+          bb = (b[0].match(/-/g) || []).length;
+          return bb - aa;
         });
         pricingPlan.platforms[i].forEach(([p, properties], pi) => { // platformIndex
           console.log('- ', p);
@@ -159,14 +160,14 @@ module.exports = async ({id}) => {
             const childSelect = property.select?.name;
 
             // console.log(platforms?.[0]?.[1]?.[propertyName]?.select);
-            console.log(propertyName, ' ', p );
+            console.log(propertyName, ' ', p);
 
 
             // default from worldwide
             const w = country?.[c != 'Worldwide' ? 'Worldwide' : undefined]?.[i]?.[p]?.[propertyName]?.select?.name.replace('∇', '');
 
             let x;
-            if (pi==0) {
+            if (pi == 0) {
               // console.log('hallo ', pricingPlan?.platforms?.[i-1]?.[0]?.[1]);
               // default for previous pricing plan
               x = pricingPlan?.platforms?.[i - 1]?.[0]?.[1]?.[propertyName]?.select?.name.replace('∇', '');
@@ -174,7 +175,7 @@ module.exports = async ({id}) => {
             }
 
             // same platform from previous pricing plan
-            const y = pricingPlan?.[i-1]?.[p]?.[propertyName]?.select?.name.replace('∇', '');
+            const y = pricingPlan?.[i - 1]?.[p]?.[propertyName]?.select?.name.replace('∇', '');
 
             // default for current pricing plan
             // console.log('blep ', pricingPlan.platforms[i][0][1]);
@@ -251,7 +252,7 @@ module.exports = async ({id}) => {
   for (const [s, country] of Object.entries(softwareList)) {
     console.log('- - - Software ', s);
     for (const [c, pricingPlan] of Object.entries(country)) {
-      console.log('- - Country ', c );
+      console.log('- - Country ', c);
       // eslint-disable-next-line guard-for-in
       for (const i in pricingPlan) {
         const info = pricingPlan[i].info;
@@ -262,12 +263,12 @@ module.exports = async ({id}) => {
           for (const [pr, property] of Object.entries(properties)) {
             console.log(softwareList[s][c][i]);
             softwareList[s][c][i][pl][pr] = property?.select?.name.includes('✓') ? true :
-             property?.select?.name.includes('✕') ? false :
-             null;
+              property?.select?.name.includes('✕') ? false :
+                null;
           }
 
           const x = pl.split('-');
-          if (x.length>1) {
+          if (x.length > 1) {
             console.log(x);
             x.forEach((l) => {
               softwareList[s][c][i][l] = softwareList[s][c][i][l] || softwareList[s][c][i][pl];
@@ -303,7 +304,8 @@ module.exports = async ({id}) => {
 
   // ∇ as inherited
   // console.log(softwareList)
-  return softwareList;
+
+  return {data: softwareList, properties: propertiesNames};
 };
 
 
@@ -315,9 +317,7 @@ String.prototype.newTrim = function newTrim() {
 
 exports.formatPage = formatPage = (page) => {
   // TODO: format properties and non-properties in a way that makes them distinguishable automatically
-  const newPage = {
-    id: page.id,
-  };
+  const newPage = {};
 
   Object.entries(page.properties)
       .filter(([key]) => key.includes('${') || ['Country', 'Pricing Plan', 'Platform', 'Price Month', 'Software', 'Platforms Number'].includes(key) ? false : true)
@@ -325,6 +325,9 @@ exports.formatPage = formatPage = (page) => {
         newPage[key] = property;
       });
 
+  propertiesNames = propertiesNames.length == 0 ? Object.entries(newPage).map(([propertyName]) => propertyName) : propertiesNames;
+
+  newPage.id = page.id;
   return newPage;
 };
 

@@ -29,7 +29,8 @@ async function scrape() {
     // const cells = await rows[i].$$('div');
 
     result.push( await rows[i].evaluate((x) => {
-      x.innerText;
+      const y = x.innerText;
+      console.log(y);
     },
     ));
 
