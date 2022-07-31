@@ -18,6 +18,7 @@ class Entry {
     this.id = entry.id;
     this.properties = entry.properties;
     this.url = entry.url;
+    this.title = entry.title;
     /* Object.entries(result).forEach(([key, value]) => {
       this[key] = value;
     }); */
