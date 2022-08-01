@@ -11,7 +11,7 @@ const notion = global.notion.client;
 
 try {
   exports.db = async (id) => {
-	  return await notion.databases.retrieve({database_id: id});
+    return await notion.databases.retrieve({database_id: id});
   },
 
   // Query DB | Get Pages from a DB
@@ -22,7 +22,7 @@ try {
 
   // Query Page
   exports.page = async (id) => {
-	  return await notion.pages.retrieve({page_id: id});
+    return await notion.pages.retrieve({page_id: id});
     // returns object as page
   },
 
