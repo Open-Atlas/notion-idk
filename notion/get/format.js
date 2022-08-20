@@ -102,6 +102,148 @@ class Page extends Entry {
   };
 };
 
+class Block extends Entry {
+  constructor(block, options) {
+    super(block);
+  }
+
+  static async init(block, options) {
+    Object.defineProperty(block, 'options', {
+      enumerable: false,
+      value: {},
+    });
+    console.log(options);
+    // if you want the HTML, it goes through a completely different process
+    block = options.html ? await Block.parseAsHTML(block) : new Block(block);
+    // console.log('PAGE ', page);
+    // console.log('CACHE1 ', global.notion?.cache?.page?.[page.id]);
+    console.log(block);
+    // make property non-iterable
+
+
+    // console.log(global.notion.cache.page[page.id]);
+    return block;
+  }
+
+  static parseAsHTML(block) {
+    console.log('parsing as HTML...');
+    let result = '';
+    switch (block.type) {
+      case 'paragraph': {
+        console.log('identified paragraph...');
+        const {rich_text: richText} = block.paragraph;
+        result += parseRichText(richText);
+        result = `<p>${result}</p>`;
+        break;
+      }
+
+      case 'heading_1': {
+        const {rich_text: richText} = block.heading_1;
+        result += parseRichText(richText);
+        result = `<h1>${result}</h1>`;
+        break;
+      }
+      case 'heading_2': {
+        const {rich_text: richText} = block.heading_2;
+        result += parseRichText(richText);
+        result = `<h2>${result}</h2>`;
+        break;
+      }
+      case 'heading_3': {
+        const {rich_text: richText} = block.heading_3;
+        result += parseRichText(richText);
+        result = `<h3>${result}</h3>`;
+        break;
+      }
+      case 'bulleted_list_item':
+        const {rich_text: richText} = block.bulleted_list_item;
+        result += parseRichText(richText);
+        console.log('111', (moduleIndex > 0));
+        console.log('222', (moduleIndex + 1 < moduleDataArray.length));
+        console.log('THE INDEX ', moduleIndex);
+        console.log('THE ARRAY ', moduleDataArray[moduleIndex+1]);
+        console.log('THE TYPE ', moduleDataArray[moduleIndex+1].type);
+        const {type: prevType} = (moduleIndex > 0) ? moduleDataArray[moduleIndex - 1] : {type: 'x'};
+        const {type: nextType} = (moduleIndex + 1 < moduleDataArray.length) ? moduleDataArray[moduleIndex + 1] : {type: 'x'};
+
+        const openTag = 'bulleted_list_item' == prevType ? '' : `<ul>`;
+        const closeTag = 'bulleted_list_item' == nextType ? '' : `</ul>`;
+        // check if previous block is bulleted_list_item
+        result = `${openTag}<li>${result}</li>${closeTag}`;
+        break;
+      case 'numbered_list_item':
+        // to implement, Notion ur bullshit, no info about the number in the API
+        break;
+      case 'image':
+        console.log('identified image...');
+        const {image} = block;
+        const src = image.type == 'external' ? image.external.url :
+        image.type == 'file' ? image.file.url : '';
+        result = `<figure><img src="${src}"><figcaption>${getCaption(image)}</figcaption></figure>`;
+        break;
+      case 'bookmark':
+        const {bookmark} = block;
+        const {url} = bookmark;
+        // need to check url and fill with metadata
+        result = `<div class="bookmark"><a href="${url}"></a><caption>${getCaption(bookmark)}</caption></div>`;
+        break;
+    }
+    return result;
+
+    function getCaption(blockObj) {
+      return blockObj.caption.length ? parseRichText(blockObj.caption) : '';
+    }
+
+    function parseRichText(richText) {
+      console.log('RICHTEXT ', richText);
+      if (richText.mention) {
+        return;
+      }
+      let result = '';
+      richText.forEach(({text, annotations, href, mention}, i) => {
+        if (mention) return;
+        // internal mentions need to be converted into website links.
+        // provide domain as parameter and it can be done, I think?
+        // shiet the slugs.
+
+        let {content} = text;
+        if (!content.trim()) {
+          return;
+        }
+
+        content = annotations.bold ? `<b>${content}</b>` :content;
+        content = annotations.italic ? `<i>${content}</i>` :content;
+        content = annotations.strikethrough ? `<s>${content}</s>` :content;
+        content = annotations.underline ? `<u>${content}</u>` :content;
+        content = annotations.code ? `<code>${content}</code>` :content;
+        content = annotations.color && annotations.color != 'default' ? `<span style="color:${annotations.color}">${content}</span>` :
+        content;
+
+        // TO-DO: if adjacent text has same url, merge it
+        // if the previous is the same, don't open the tag
+        // if the next is the same, don't close the tag
+        if (href) {
+          console.log(i, i > 0, i < richText.length);
+          console.log('PREV', richText[i -1]);
+          console.log('NEXT', richText[i+1]);
+          const {href: prevHref} = (i > 0) ? richText[i - 1] : {href: 'x'};
+          const {href: nextHref} = (i +1 < richText.length) ? richText[i + 1] : {href: 'x'};
+
+          const x = href == prevHref ? '' : `<a href="${href}" target="_blank">`;
+          const y = href == nextHref ? '' : `</a>`;
+          content = `${x}${content}${y}`;
+        }
+
+        console.log('result_content', content);
+
+
+        result += content;
+      });
+      return result;
+    };
+  }
+}
+
 
 // TODO: #9 implement cache system, object with id as index
 
@@ -118,22 +260,31 @@ entry = async (entry, options) => {
   // Pages have title inside properties.title
   return entry.object == 'page' ? await Page.init(entry, options) :
   entry.object == 'database' ? new Database(entry, options) :
+  entry.object == 'block' ? Block.init(entry, options) :
   entry;
 };
 
+moduleDataArray = [];
+moduleIndex = 0;
+
 module.exports = async (data, options = {}) => {
+  // console.log('format..');
   // data = {...data};
   let _data;
   // console.log(data);
   if (data.object == 'list') {
+    // save as global variable to manage bulleted_list_item (and more probably)
+    moduleDataArray = data.results;
     _data = [];
+    moduleIndex = 0;
     // eslint-disable-next-line guard-for-in
     for (const d of data.results) {
       _data.push(await entry(d, options));
+      moduleIndex++;
     }
   } else {
     _data = await entry(data, options);
   }
   // console.log('FORMAT', _data);
-  return _data;
+  return options.html ? _data.join('') : _data;
 };
