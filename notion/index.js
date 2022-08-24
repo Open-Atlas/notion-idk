@@ -4,13 +4,13 @@ global.notion = {
 };
 // const sampleData = require('./sample.json');
 const get = require('./get');
-const update = require('./update');
-const create = require('./create');
+const post = require('./post');
+// const update = require('./update');
+// const create = require('./post');
 const advanced = require('./advanced');
 
 module.exports = {
   get,
-  update,
-  create,
+  post,
   advanced,
 };
