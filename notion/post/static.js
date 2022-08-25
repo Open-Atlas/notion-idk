@@ -11,28 +11,30 @@ const notion = global.notion.client;
 
 try {
   // Query DB | Get Pages from a DB
-  exports.query = async ({id, filter, sorts}) => {
+  exports.query = async ({id, filter = undefined, sorts = undefined}) => {
+    console.log('QUERY...');
+    const object = filter ? {filter} : {};
+    console.log('OBJ ', JSON.stringify(object));
     return await notion.databases.query({
       database_id: id,
-      filter,
-      sorts,
+      ...object,
       /* filter: {
-        or: [
+        and: [
           {
-            property: 'In stock',
-            checkbox: {
-              equals: true,
+            'property': 'menu',
+            'checkbox': {
+              'equals': true,
             },
           },
           {
-            property: 'Cost of next trip',
-            number: {
-              greater_than_or_equal_to: 2,
+            'property': 'region',
+            'rich_text': {
+              'equals': 'it',
             },
           },
         ],
-      },
-      sorts: [
+      }, */
+      /*  sorts: [
         {
           property: 'Last ordered',
           direction: 'ascending',
@@ -42,7 +44,7 @@ try {
     // returns object with results parameter as array of pages
   },
 
-  exports.search= async ({query = undefined, filter = undefined}) => { // filter 'database' or 'page'
+  exports.search = async ({query = undefined, filter = undefined}) => { // filter 'database' or 'page'
     let object = {
       query,
     };
