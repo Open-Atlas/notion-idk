@@ -190,6 +190,8 @@ class Block extends Entry {
         return;
       }
       let result = '';
+      let _class = '';
+      let _style = '';
       // search with shortcode regex
       // create html to employ
       // delete the shortcode
@@ -203,10 +205,6 @@ class Block extends Entry {
 
         let {content} = text;
         console.log('_CONTENT ', text);
-
-
-        let _class = '';
-        let _style = '';
 
         try {
           let x = content.match(/(\${.+})/)[0];
@@ -259,9 +257,9 @@ class Block extends Entry {
         // console.log('result_content', content);
 
 
-        result += tag ? `<${tag}${_style}${_class}>${content}</${tag}>` : content;
+        result += content;
       });
-      return result;
+      return tag ? `<${tag}${_style}${_class}>${result}</${tag}>` : result;
     };
   }
 }
