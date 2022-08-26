@@ -117,7 +117,7 @@ class Block extends Entry {
     block = options.html ? await Block.parseAsHTML(block) : new Block(block);
     // console.log('PAGE ', page);
     // console.log('CACHE1 ', global.notion?.cache?.page?.[page.id]);
-    console.log(block);
+    // console.log(block);
     // make property non-iterable
 
 
@@ -128,31 +128,18 @@ class Block extends Entry {
   static parseAsHTML(block) {
     console.log('parsing as HTML...');
     let result = '';
+    let tag = '';
     switch (block.type) {
-      case 'paragraph': {
-        console.log('identified paragraph...');
-        const {rich_text: richText} = block.paragraph;
-        result += parseRichText(richText);
-        result = `<p>${result}</p>`;
-        break;
-      }
-
-      case 'heading_1': {
-        const {rich_text: richText} = block.heading_1;
-        result += parseRichText(richText);
-        result = `<h1>${result}</h1>`;
-        break;
-      }
-      case 'heading_2': {
-        const {rich_text: richText} = block.heading_2;
-        result += parseRichText(richText);
-        result = `<h2>${result}</h2>`;
-        break;
-      }
+      case 'paragraph':
+      case 'heading_1':
+      case 'heading_2':
       case 'heading_3': {
-        const {rich_text: richText} = block.heading_3;
-        result += parseRichText(richText);
-        result = `<h3>${result}</h3>`;
+        tag = block.type == 'paragraph' ? 'p' :
+          block.type == 'heading_1' ? 'h1' :
+          block.type == 'heading_2' ? 'h2' :
+          block.type == 'heading_3' ? 'h3' : '';
+        const {rich_text: richText} = block[block.type];
+        result += parseRichText(richText, tag);
         break;
       }
       case 'bulleted_list_item':
@@ -197,12 +184,17 @@ class Block extends Entry {
       return blockObj.caption.length ? parseRichText(blockObj.caption) : '';
     }
 
-    function parseRichText(richText) {
+    function parseRichText(richText, tag = undefined) {
       console.log('RICHTEXT ', richText);
       if (richText.mention) {
         return;
       }
       let result = '';
+      // search with shortcode regex
+      // create html to employ
+      // delete the shortcode
+
+      // style class
       richText.forEach(({text, annotations, href, mention}, i) => {
         if (mention) return;
         // internal mentions need to be converted into website links.
@@ -210,6 +202,33 @@ class Block extends Entry {
         // shiet the slugs.
 
         let {content} = text;
+        console.log('_CONTENT ', text);
+
+
+        let _class = '';
+        let _style = '';
+
+        try {
+          let x = content.match(/(\${.+})/)[0];
+          content = content.replace(x, '');
+          x = x.replaceAll('”', '"');
+          console.log('JSON PARSE 1 ', x);
+
+          if (x.length) {
+            x = JSON.parse(x.substring(1));
+            if (x.class) {
+              _class = ` class="${x.class}"`;
+            }
+            if (x.style) {
+              _style = ` style="${x.style}"`;
+            }
+            console.log('JSON PARSED ', x);
+          }
+        } catch (e) {
+          // console.log(e);
+        }
+
+
         if (!content.trim()) {
           return;
         }
@@ -226,9 +245,9 @@ class Block extends Entry {
         // if the previous is the same, don't open the tag
         // if the next is the same, don't close the tag
         if (href) {
-          console.log(i, i > 0, i < richText.length);
+          /* console.log(i, i > 0, i < richText.length);
           console.log('PREV', richText[i - 1]);
-          console.log('NEXT', richText[i + 1]);
+          console.log('NEXT', richText[i + 1]); */
           const {href: prevHref} = (i > 0) ? richText[i - 1] : {href: 'x'};
           const {href: nextHref} = (i + 1 < richText.length) ? richText[i + 1] : {href: 'x'};
 
@@ -237,10 +256,10 @@ class Block extends Entry {
           content = `${x}${content}${y}`;
         }
 
-        console.log('result_content', content);
+        // console.log('result_content', content);
 
 
-        result += content;
+        result += tag ? `<${tag}${_style}${_class}>${content}</${tag}>` : content;
       });
       return result;
     };
