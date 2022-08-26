@@ -71,20 +71,20 @@ class Page extends Entry {
     delete this.properties[titleKey];
     // adds title to page (instead of being inside properties)
     this.title = titleObject?.title?.[0]?.plain_text || '';
-  // console.log('entry.title', entry.title);
+    // console.log('entry.title', entry.title);
   };
 
   async formatRelations() {
     console.log('formatting relations..');
-    const _properties = deepClone(Object.entries(this.properties).filter(([, property])=> {
-      return property.type=='relation';
+    const _properties = deepClone(Object.entries(this.properties).filter(([, property]) => {
+      return property.type == 'relation';
     }));
     // console.log(_properties);
 
     // eslint-disable-next-line guard-for-in
     for (const [key, {relation}] of _properties) {
-    // console.log(relation);
-    // eslint-disable-next-line guard-for-in
+      // console.log(relation);
+      // eslint-disable-next-line guard-for-in
       for (const i in relation) {
         const {id} = relation[i];
         // console.log(relation);
@@ -95,7 +95,7 @@ class Page extends Entry {
         // console.log('title ', title);
 
         this.properties[key].relation[i].title = title;
-      // properties[key].data
+        // properties[key].data
       }
     }
     this.options.relations = true;
@@ -161,8 +161,8 @@ class Block extends Entry {
         console.log('111', (moduleIndex > 0));
         console.log('222', (moduleIndex + 1 < moduleDataArray.length));
         console.log('THE INDEX ', moduleIndex);
-        console.log('THE ARRAY ', moduleDataArray[moduleIndex+1]);
-        console.log('THE TYPE ', moduleDataArray[moduleIndex+1].type);
+        console.log('THE ARRAY ', moduleDataArray[moduleIndex + 1]);
+        console.log('THE TYPE ', moduleDataArray[moduleIndex + 1].type);
         const {type: prevType} = (moduleIndex > 0) ? moduleDataArray[moduleIndex - 1] : {type: 'x'};
         const {type: nextType} = (moduleIndex + 1 < moduleDataArray.length) ? moduleDataArray[moduleIndex + 1] : {type: 'x'};
 
@@ -178,7 +178,7 @@ class Block extends Entry {
         console.log('identified image...');
         const {image} = block;
         const src = image.type == 'external' ? image.external.url :
-        image.type == 'file' ? image.file.url : '';
+          image.type == 'file' ? image.file.url : '';
         result = `<figure><img src="${src}"><figcaption>${getCaption(image)}</figcaption></figure>`;
         break;
       case 'bookmark':
@@ -186,6 +186,9 @@ class Block extends Entry {
         const {url} = bookmark;
         // need to check url and fill with metadata
         result = `<div class="bookmark"><a href="${url}"></a><caption>${getCaption(bookmark)}</caption></div>`;
+        break;
+      case 'divider':
+        result = '<hr/>';
         break;
     }
     return result;
@@ -211,23 +214,23 @@ class Block extends Entry {
           return;
         }
 
-        content = annotations.bold ? `<b>${content}</b>` :content;
-        content = annotations.italic ? `<i>${content}</i>` :content;
-        content = annotations.strikethrough ? `<s>${content}</s>` :content;
-        content = annotations.underline ? `<u>${content}</u>` :content;
-        content = annotations.code ? `<code>${content}</code>` :content;
+        content = annotations.bold ? `<b>${content}</b>` : content;
+        content = annotations.italic ? `<i>${content}</i>` : content;
+        content = annotations.strikethrough ? `<s>${content}</s>` : content;
+        content = annotations.underline ? `<u>${content}</u>` : content;
+        content = annotations.code ? `<code>${content}</code>` : content;
         content = annotations.color && annotations.color != 'default' ? `<span style="color:${annotations.color}">${content}</span>` :
-        content;
+          content;
 
         // TO-DO: if adjacent text has same url, merge it
         // if the previous is the same, don't open the tag
         // if the next is the same, don't close the tag
         if (href) {
           console.log(i, i > 0, i < richText.length);
-          console.log('PREV', richText[i -1]);
-          console.log('NEXT', richText[i+1]);
+          console.log('PREV', richText[i - 1]);
+          console.log('NEXT', richText[i + 1]);
           const {href: prevHref} = (i > 0) ? richText[i - 1] : {href: 'x'};
-          const {href: nextHref} = (i +1 < richText.length) ? richText[i + 1] : {href: 'x'};
+          const {href: nextHref} = (i + 1 < richText.length) ? richText[i + 1] : {href: 'x'};
 
           const x = href == prevHref ? '' : `<a href="${href}" target="_blank">`;
           const y = href == nextHref ? '' : `</a>`;
@@ -259,9 +262,9 @@ entry = async (entry, options) => {
   // DBs have entry.title
   // Pages have title inside properties.title
   return entry.object == 'page' ? await Page.init(entry, options) :
-  entry.object == 'database' ? new Database(entry, options) :
-  entry.object == 'block' ? Block.init(entry, options) :
-  entry;
+    entry.object == 'database' ? new Database(entry, options) :
+      entry.object == 'block' ? Block.init(entry, options) :
+        entry;
 };
 
 moduleDataArray = [];
