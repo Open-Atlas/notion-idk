@@ -33,7 +33,7 @@ try {
   exports.blockChildren= async (id) => {
     return await notion.blocks.children.list({
       block_id: id,
-      page_size: 50,
+      page_size: 100,
     });
   },
 
