@@ -185,7 +185,7 @@ class Block extends Entry {
     }
 
     function parseRichText(richText, tag = undefined) {
-      console.log('RICHTEXT ', richText);
+      // console.log('RICHTEXT ', richText);
       if (richText.mention) {
         return;
       }
@@ -204,13 +204,13 @@ class Block extends Entry {
         // shiet the slugs.
 
         let {content} = text;
-        console.log('_CONTENT ', text);
+        // console.log('_CONTENT ', text);
 
         try {
           let x = content.match(/(\${.+})/)[0];
           content = content.replace(x, '');
           x = x.replaceAll('”', '"');
-          console.log('JSON PARSE 1 ', x);
+          // console.log('JSON PARSE 1 ', x);
 
           if (x.length) {
             x = JSON.parse(x.substring(1));
@@ -220,7 +220,7 @@ class Block extends Entry {
             if (x.style) {
               _style = ` style="${x.style}"`;
             }
-            console.log('JSON PARSED ', x);
+            // console.log('JSON PARSED ', x);
           }
         } catch (e) {
           // console.log(e);

@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 // const sampleData = require('./sample.json');
 const notion = global.notion.client;
 // TODO: #4 find a way to have a main branch without console.logs
@@ -30,34 +31,17 @@ try {
     return await notion.pages.properties.retrieve({page_id: pageId, property_id: propertyId});
   }, */
 
-  exports.blockChildren= async (id) => {
+  exports.blockChildren= async (id, start_cursor) => {
     return await notion.blocks.children.list({
       block_id: id,
       page_size: 100,
+      start_cursor,
     });
   },
 
   exports.block= async (id) => {
     return global.notion.cache.block[id] = await notion.blocks.retrieve({
       block_id: id,
-    });
-  },
-
-  // search
-  exports.search= async (query = undefined, filter = {}) => { // filter 'database' or 'page'
-    return await notion.search({
-      query,
-    });
-    // returns array
-  },
-
-  exports.searchDb= async (query = undefined) => {
-    return await notion.search({
-      query,
-      filter: {
-        value: 'database',
-        property: 'object',
-      },
     });
   };
 } catch (e) {
