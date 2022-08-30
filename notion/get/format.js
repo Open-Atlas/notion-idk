@@ -177,6 +177,9 @@ class Block extends Entry {
       case 'divider':
         result = '<hr/>';
         break;
+      case 'code':
+        result = `<pre class="${block.code.language}">${block.code.rich_text[0].plain_text}</pre>`;
+        break;
     }
     return result;
 
