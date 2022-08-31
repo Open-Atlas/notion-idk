@@ -1,3 +1,5 @@
+const {page} = require('./static.js');
+
 const deepClone = ((obj) => {
   return JSON.parse(JSON.stringify(obj));
 });
@@ -112,7 +114,7 @@ class Block extends Entry {
       enumerable: false,
       value: {},
     });
-    console.log(options);
+    // console.log('BLOCK_ ', JSON.stringify(block.type));
     // if you want the HTML, it goes through a completely different process
     block = options.html ? await Block.parseAsHTML(block) : new Block(block);
     // console.log('PAGE ', page);
@@ -125,12 +127,14 @@ class Block extends Entry {
     return block;
   }
 
-  static parseAsHTML(block) {
-    console.log('parsing as HTML...');
+  static async parseAsHTML(block) {
+    // console.log('parsing as HTML...');
+    // console.log('HTML_BLOCK ', JSON.stringify(block));
     let result = '';
     let tag = '';
     switch (block.type) {
       case 'paragraph':
+        // console.log('HTML BLOCK PARSE ', JSON.stringify(block.paragraph.rich_text));
       case 'heading_1':
       case 'heading_2':
       case 'heading_3': {
@@ -139,17 +143,18 @@ class Block extends Entry {
           block.type == 'heading_2' ? 'h2' :
           block.type == 'heading_3' ? 'h3' : '';
         const {rich_text: richText} = block[block.type];
-        result += parseRichText(richText, tag);
+        // console.log('RICHTEXT ', richText);
+        result += await parseRichText(richText, tag);
         break;
       }
       case 'bulleted_list_item':
         const {rich_text: richText} = block.bulleted_list_item;
-        result += parseRichText(richText);
-        console.log('111', (moduleIndex > 0));
+        result += await parseRichText(richText);
+        /* console.log('111', (moduleIndex > 0));
         console.log('222', (moduleIndex + 1 < moduleDataArray.length));
         console.log('THE INDEX ', moduleIndex);
         console.log('THE ARRAY ', moduleDataArray[moduleIndex + 1]);
-        console.log('THE TYPE ', moduleDataArray[moduleIndex + 1].type);
+        console.log('THE TYPE ', moduleDataArray[moduleIndex + 1].type); */
         const {type: prevType} = (moduleIndex > 0) ? moduleDataArray[moduleIndex - 1] : {type: 'x'};
         const {type: nextType} = (moduleIndex + 1 < moduleDataArray.length) ? moduleDataArray[moduleIndex + 1] : {type: 'x'};
 
@@ -166,13 +171,13 @@ class Block extends Entry {
         const {image} = block;
         const src = image.type == 'external' ? image.external.url :
           image.type == 'file' ? image.file.url : '';
-        result = `<figure><img src="${src}"><figcaption>${getCaption(image)}</figcaption></figure>`;
+        result = `<figure><img src="${src}"><figcaption>${await getCaption(image)}</figcaption></figure>`;
         break;
       case 'bookmark':
         const {bookmark} = block;
         const {url} = bookmark;
         // need to check url and fill with metadata
-        result = `<div class="bookmark"><a href="${url}"></a><caption>${getCaption(bookmark)}</caption></div>`;
+        result = `<div class="bookmark"><a href="${url}"></a><caption>${await getCaption(bookmark)}</caption></div>`;
         break;
       case 'divider':
         result = '<hr/>';
@@ -180,14 +185,22 @@ class Block extends Entry {
       case 'code':
         result = `<pre class="${block.code.language}">${block.code.rich_text[0].plain_text}</pre>`;
         break;
+      /* case 'mention':
+        console.log('mentions');
+        if (block.mention.type == 'page') {
+          const {id} = block.mention.type.page;
+          const x = page(id);
+          console.log('MENTION_ ', x);
+        }
+        break; */
     }
     return result;
 
-    function getCaption(blockObj) {
-      return blockObj.caption.length ? parseRichText(blockObj.caption) : '';
+    async function getCaption(blockObj) {
+      return blockObj.caption.length ? await parseRichText(blockObj.caption) : '';
     }
 
-    function parseRichText(richText, tag = undefined) {
+    async function parseRichText(richText, tag = undefined) {
       // console.log('RICHTEXT ', richText);
       if (richText.mention) {
         return;
@@ -200,38 +213,77 @@ class Block extends Entry {
       // delete the shortcode
 
       // style class
-      richText.forEach(({text, annotations, href, mention}, i) => {
-        if (mention) return;
+      // console.log('PARSERICHTEXT ', richText);
+      // eslint-disable-next-line guard-for-in
+      for (const i in richText) {
+        const block = richText[i];
+        // console.log('BLOCK ', block);
+        const {type, annotations, href} = block;
         // internal mentions need to be converted into website links.
         // provide domain as parameter and it can be done, I think?
         // shiet the slugs.
 
-        let {content} = text;
-        // console.log('_CONTENT ', text);
+        let content = '';
+        let x = '';
 
-        try {
-          let x = content.match(/(\${.+})/)[0];
-          content = content.replace(x, '');
-          x = x.replaceAll('”', '"');
-          // console.log('JSON PARSE 1 ', x);
+        switch (type) {
+          case 'text':
+            content = block.text.content;
 
-          if (x.length) {
-            x = JSON.parse(x.substring(1));
-            if (x.class) {
-              _class = ` class="${x.class}"`;
+            // console.log('HALLO? ', content);
+            try {
+              // parse class and style
+              x = await content.match(/(\${.+})/)[0];
+              // console.log('THE MATCH ', x);
+              try {
+                content = content.replace(x, '');
+                // console.log('REPLACE ', content);
+                x = await x.replaceAll('”', '"');
+                // console.log('JSON PARSE 1 ', x);
+
+
+                if (x.length) {
+                  x = await JSON.parse(x.substring(1));
+                  console.log('parsed ', x);
+                  if (x.class) {
+                    _class = ` class="${x.class}"`;
+                  }
+                  if (x.style) {
+                    _style = ` style="${x.style}"`;
+                  }
+                // console.log('JSON PARSED ', x);
+                }
+              } catch (e) {
+                console.log(e);
+              }
+            } catch (e) {
+              // console.error('AAA ', e);
             }
-            if (x.style) {
-              _style = ` style="${x.style}"`;
+            break;
+            // TODO: getting mention of user? need to fix
+          case 'mention':
+            console.log('mention block ', block.mention);
+            if (block.mention.type == 'page') {
+              const {id} = block?.mention?.page;
+              try {
+                // TODO: this is too specific for my use case, could make it more generalized
+                // or build another service on top of it
+                const entityMentioned = await page(id);
+                const slug = entityMentioned.properties.slug.rich_text?.[0].plain_text;
+                console.log('MENTION_ ', slug);
+                content = `<a target="_blank" href="<BLOG>${slug}">${block.plain_text}</a>`;
+              } catch (e) {
+                console.error('INLINE MENTION ERROR ', e);
+              }
             }
-            // console.log('JSON PARSED ', x);
-          }
-        } catch (e) {
-          // console.log(e);
+            break;
         }
+
+        console.log('_CONTENT ', content);
 
 
         if (!content.trim()) {
-          return;
+          continue;
         }
 
         content = annotations.bold ? `<b>${content}</b>` : content;
@@ -245,7 +297,7 @@ class Block extends Entry {
         // TO-DO: if adjacent text has same url, merge it
         // if the previous is the same, don't open the tag
         // if the next is the same, don't close the tag
-        if (href) {
+        if (href && type!='mention') {
           /* console.log(i, i > 0, i < richText.length);
           console.log('PREV', richText[i - 1]);
           console.log('NEXT', richText[i + 1]); */
@@ -259,9 +311,9 @@ class Block extends Entry {
 
         // console.log('result_content', content);
 
-
+        console.log('ALMOSTRESULT ', content);
         result += content;
-      });
+      };
       return tag ? `<${tag}${_style}${_class}>${result}</${tag}>` : result;
     };
   }
