@@ -199,8 +199,8 @@ class Block extends Entry {
 		async function getCaption(caption, element, tag) {
 			return caption.length ?
 				await parseRichText(caption,
-					element.replace("%FIGCAPTION%", `${tag}%TEXT%</${tag}>`))
-				: element.replace("%FIGCAPTION%", "").replace("%ATTRIBUTES%", "");
+					element.replace("%CAPTION%", `<${tag}>%TEXT%</${tag}>`))
+				: element.replace("%CAPTION%", "").replace("%ATTRIBUTES%", "");
 		}
 
 		async function parseRichText(richText, element = undefined) {
