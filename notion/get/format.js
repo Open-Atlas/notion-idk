@@ -169,9 +169,13 @@ class Block extends Entry {
 			case 'image':
 				console.log('identified image...');
 				const { image } = block;
+				//TODO: alt attribute defaults to filename
 				const src = image.type == 'external' ? image.external.url :
 					image.type == 'file' ? image.file.url : '';
-				result = await getCaption(image.caption || {}, `<figure><img src="${src}"%ATTRIBUTES%>%CAPTION%</figure>`, "figcaption");
+				const attributes = {
+					alt: src.split('/').pop().replace(/(-|_)/g, " ").split(".")[0]
+				}
+				result = await getCaption(image.caption || {}, `<figure><img src="${src}"%ATTRIBUTES%>%CAPTION%</figure>`, "figcaption", attributes);
 				break;
 			case 'bookmark':
 				const { bookmark } = block;
@@ -196,20 +200,28 @@ class Block extends Entry {
 		}
 		return result;
 
-		async function getCaption(caption, element, tag) {
-			return caption.length ?
-				await parseRichText(caption,
-					element.replace("%CAPTION%", `<${tag}>%TEXT%</${tag}>`))
-				: element.replace("%CAPTION%", "").replace("%ATTRIBUTES%", "");
+		function getAttributesString(attributes) {
+			let attributesString = "";
+			for (const [key, value] of Object.entries(attributes)) {
+				//console.log("hallo ", key, value)
+				attributesString += ` ${key}="${value}"`
+			}
+			return attributesString;
 		}
 
-		async function parseRichText(richText, element = undefined) {
+		async function getCaption(caption, element, tag, attributes = {}) {
+			return caption.length ?
+				await parseRichText(caption, element.replace("%CAPTION%", `<${tag}>%TEXT%</${tag}>`), attributes)
+				: element.replace("%CAPTION%", "").replace("%ATTRIBUTES%", getAttributesString(attributes));
+		}
+
+		async function parseRichText(richText, element = undefined, attributes = {}) {
 			// console.log('RICHTEXT ', richText);
 			if (richText.mention) {
 				return;
 			}
 			let result = '';
-			let attributes = '';
+
 			// search with shortcode regex
 			// create html to employ
 			// delete the shortcode
@@ -226,7 +238,6 @@ class Block extends Entry {
 				// shiet the slugs.
 
 				let content = '';
-				let x = '';
 
 				switch (type) {
 					case 'text':
@@ -235,7 +246,7 @@ class Block extends Entry {
 						// console.log('HALLO? ', content);
 						try {
 							// parse class and style
-							x = await content.match(/(\${.+})/)[0];
+							let x = await content.match(/(\${.+})/)[0];
 							// console.log('THE MATCH ', x);
 							try {
 								content = content.replace(x, '');
@@ -247,12 +258,14 @@ class Block extends Entry {
 								if (x.length) {
 									x = await JSON.parse(x.substring(1));
 									console.log('parsed ', x);
-									if (x.class) {
-										attributes += ` class="${x.class}"`;
-									}
-									if (x.style) {
-										attributes += ` style="${x.style}"`;
-									}
+									attributes = { ...attributes, ...x }
+
+									/* 	if (x.class) {
+											attributes.class += ` class="${x.class}"`;
+										}
+										if (x.style) {
+											attributes.style += ` style="${x.style}"`;
+										} */
 									// console.log('JSON PARSED ', x);
 								}
 							} catch (e) {
@@ -281,7 +294,7 @@ class Block extends Entry {
 						break;
 				}
 
-				console.log('_CONTENT ', content);
+				//console.log('_CONTENT ', content);
 
 
 				if (!content.trim()) {
@@ -313,10 +326,11 @@ class Block extends Entry {
 
 				// console.log('result_content', content);
 
-				console.log('ALMOSTRESULT ', content);
+				//console.log('ALMOSTRESULT ', content);
 				result += content;
 			};
-			return element ? element.replace("%TEXT%", result).replace("%ATTRIBUTES%", attributes) : result;
+
+			return element ? element.replace("%TEXT%", result).replace("%ATTRIBUTES%", getAttributesString(attributes)) : result;
 		};
 	}
 }
