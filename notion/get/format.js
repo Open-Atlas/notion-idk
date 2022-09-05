@@ -21,6 +21,12 @@ class Entry {
 		this.properties = entry.properties;
 		this.url = entry.url;
 		this.title = entry.title;
+		this.time = {
+			created: entry.created_time,
+			edited: entry.last_edited_time
+		}
+		this.cover = entry?.cover?.[entry?.cover?.type]?.url
+
 		/* Object.entries(result).forEach(([key, value]) => {
 		  this[key] = value;
 		}); */
