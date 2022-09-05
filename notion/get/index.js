@@ -1,5 +1,5 @@
 const get = require('./static.js');
-const format = require('./format.js');
+const format = require('../format.js');
 
 module.exports = async (dataType, {id=null, query=null, ...options}) => {
   let response = {

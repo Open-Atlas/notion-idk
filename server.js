@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const Router = require('@koa/router');
 const helmet = require('koa-helmet');
-const koaBody = require('koa-body')({multipart: true});
+const koaBody = require('koa-body')({ multipart: true });
 const cors = require('@koa/cors');
 
 const app = new Koa();
@@ -12,24 +12,24 @@ app.use(helmet());
 
 const notion = require('./notion');
 
-const {createReadStream} = require('fs');
+const { createReadStream } = require('fs');
 
 router.get('/graph', (ctx) => {
-  ctx.type = 'html';
-  ctx.body = createReadStream('./d3networkgraph/graph.html');
+	ctx.type = 'html';
+	ctx.body = createReadStream('./d3networkgraph/graph.html');
 });
 
 router.get('/graph2', (ctx) => {
-  ctx.type = 'html';
-  ctx.body = createReadStream('./d3networkgraph/graph2.html');
+	ctx.type = 'html';
+	ctx.body = createReadStream('./d3networkgraph/graph2.html');
 });
 
 router.get('/', (ctx) => {
-  ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
+	ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
 });
 
 router.post('/', (ctx) => {
-  ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
+	ctx.response.body = 'As we all stand on the shoulders of giants, tomorrow I hope to be the same for you.';
 });
 
 /* const basicAuth = process.env.BASIC_AUTH;
@@ -44,7 +44,7 @@ router.use(async (ctx, next) => {
 }); */
 
 router.get('/csv', (ctx) => {
-  ctx.response.body = 'blep.';
+	ctx.response.body = 'blep.';
 });
 
 // PARSES CSV FILE
@@ -54,93 +54,93 @@ const csv = require('csv-parser');
 
 // eslint-disable-next-line require-jsdoc
 function parseCsv(filePath) {
-  const results = [];
-  return new Promise((resolve) => {
-    fs.createReadStream(filePath)
-        .pipe(csv())
-        .on('data', (data) => results.push(data))
-        .on('end', () => {
-          resolve(results);
-        });
-  });
+	const results = [];
+	return new Promise((resolve) => {
+		fs.createReadStream(filePath)
+			.pipe(csv())
+			.on('data', (data) => results.push(data))
+			.on('end', () => {
+				resolve(results);
+			});
+	});
 }
 
 router.get('/notion/:dataType', async (ctx) => {
-  const {dataType} = ctx.params;
-  const x = await notion.get(dataType, ctx.query);
-  // console.log('AT SERVER.JS ', x);
-  ctx.response.body = x;
+	const { dataType } = ctx.params;
+	const x = await notion.get(dataType, ctx.query);
+	// console.log('AT SERVER.JS ', x);
+	ctx.response.body = x;
 });
 
 router.post('/notion/:operation', koaBody, async (ctx) => {
-  const {operation} = ctx.params;
-  // console.log('AT SERVER.JS ', x);
-  ctx.response.body = await notion.post(operation, ctx.request.body);
+	const { operation } = ctx.params;
+	// console.log('AT SERVER.JS ', x);
+	ctx.response.body = await notion.post(operation, ctx.request.body, ctx.query);
 });
 
 router.put('/notion/:dataType', koaBody, async (ctx) => {
-  const {dataType} = ctx.params;
-  const x = await notion.create(dataType, ctx.request.body);
-  // console.log('AT SERVER.JS ', x);
-  ctx.response.body = x;
+	const { dataType } = ctx.params;
+	const x = await notion.create(dataType, ctx.request.body);
+	// console.log('AT SERVER.JS ', x);
+	ctx.response.body = x;
 });
 
 router.get('/notion/sync', async (ctx) => {
-  ctx.response.body = await notion.advanced.sync();
+	ctx.response.body = await notion.advanced.sync();
 });
 
 router.get('/notion/relationJson', (ctx) => {
-  const x = notion.advanced.relationJson(ctx.params);
-  ctx.response.body = x.Books;
+	const x = notion.advanced.relationJson(ctx.params);
+	ctx.response.body = x.Books;
 });
 
 router.get('/notion/addSelectOption', async (ctx) => {
-  ctx.response.body = await notion.advanced.addSelectOption(ctx.query);
+	ctx.response.body = await notion.advanced.addSelectOption(ctx.query);
 });
 
 router.post('/notion/hierarchyPlatform', async (ctx) => {
-  ctx.response.body = await notion.advanced.hierarchyPlatform(ctx.query);
+	ctx.response.body = await notion.advanced.hierarchyPlatform(ctx.query);
 });
 
 router.post('/notion/formulaTitle', async (ctx) => {
-  ctx.response.body = await notion.advanced.formulaTitle(ctx.query);
+	ctx.response.body = await notion.advanced.formulaTitle(ctx.query);
 });
 
 router.get('/notion/makeHierarchy', async (ctx) => {
-  ctx.response.body = await notion.advanced.makeHierarchy(ctx.query);
+	ctx.response.body = await notion.advanced.makeHierarchy(ctx.query);
 });
 
 router.get('/notion/formatPage', async (ctx) => {
-  ctx.response.body = await notion.advanced.formatPage(ctx.query);
+	ctx.response.body = await notion.advanced.formatPage(ctx.query);
 });
 
 router.get('/testquery', (ctx) => {
-  ctx.response.body = ctx.params;
+	ctx.response.body = ctx.params;
 });
 
 router.post('/csv', koaBody, async (ctx) => {
-  // console.log(ctx.request.files)
-  await parseCsv(ctx.request.files.csv.path).then((x) =>
-    ctx.response.body = JSON.stringify(x));
+	// console.log(ctx.request.files)
+	await parseCsv(ctx.request.files.csv.path).then((x) =>
+		ctx.response.body = JSON.stringify(x));
 });
 
 router.post('/formData', (ctx) => {
-  ctx.response.body = JSON.stringify(ctx.request.body);
+	ctx.response.body = JSON.stringify(ctx.request.body);
 });
 
 router.use((ctx) => {
-  ctx.response.status = 404;
+	ctx.response.status = 404;
 });
 
 app.use(router.routes());
 
 app.on('error', (e) => {
-  // headers data makes Koa crash during error handling
-  e.headers = {};
-  console.error(e);
+	// headers data makes Koa crash during error handling
+	e.headers = {};
+	console.error(e);
 });
 
 // PORT
 const port = process.env.PORT || 3000;
-app.listen(port, () => {});
+app.listen(port, () => { });
 console.log('listening on port ' + port);

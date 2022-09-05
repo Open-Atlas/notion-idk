@@ -10,53 +10,53 @@ const notion = global.notion.client;
 
 
 try {
-  // Query DB | Get Pages from a DB
-  exports.query = async ({id, filter = undefined, sorts = undefined}) => {
-    console.log('QUERY...');
-    const object = filter ? {filter} : {};
-    console.log('OBJ ', JSON.stringify(object));
-    return await notion.databases.query({
-      database_id: id,
-      ...object,
-      /* filter: {
-        and: [
-          {
-            'property': 'menu',
-            'checkbox': {
-              'equals': true,
-            },
-          },
-          {
-            'property': 'region',
-            'rich_text': {
-              'equals': 'it',
-            },
-          },
-        ],
-      }, */
-      /*  sorts: [
-        {
-          property: 'Last ordered',
-          direction: 'ascending',
-        },
-      ], */
-    });
-    // returns object with results parameter as array of pages
-  },
+	// Query DB | Get Pages from a DB
+	exports.query = async ({ id, filter = undefined, sorts = undefined }) => {
+		console.log('QUERY...');
+		const object = filter ? { filter } : {};
+		//console.log('OBJ ', JSON.stringify(object));
+		return await notion.databases.query({
+			database_id: id,
+			...object,
+			/* filter: {
+			  and: [
+				{
+				  'property': 'menu',
+				  'checkbox': {
+					'equals': true,
+				  },
+				},
+				{
+				  'property': 'region',
+				  'rich_text': {
+					'equals': 'it',
+				  },
+				},
+			  ],
+			}, */
+			/*  sorts: [
+			  {
+				property: 'Last ordered',
+				direction: 'ascending',
+			  },
+			], */
+		});
+		// returns object with results parameter as array of pages
+	},
 
-  exports.search = async ({query = undefined, filter = undefined}) => { // filter 'database' or 'page'
-    let object = {
-      query,
-    };
+		exports.search = async ({ query = undefined, filter = undefined }) => { // filter 'database' or 'page'
+			let object = {
+				query,
+			};
 
-    object = filter ? {...object, filter} : object;
+			object = filter ? { ...object, filter } : object;
 
-    return await notion.search({
-      ...object,
-    });
-    // returns array
-  };
+			return await notion.search({
+				...object,
+			});
+			// returns array
+		};
 } catch (e) {
-  console.log(e);
+	console.log(e);
 }
 

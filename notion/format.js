@@ -1,4 +1,4 @@
-const { page } = require('./static.js');
+const { page } = require('./get/static.js');
 
 const deepClone = ((obj) => {
 	return JSON.parse(JSON.stringify(obj));
@@ -97,7 +97,7 @@ class Page extends Entry {
 				const { id } = relation[i];
 				// console.log(relation);
 				// console.log(global.notionCache[id]);
-				const get = require('./index.js');
+				const get = require('./get/index.js');
 				// console.log(get);
 				const { title } = await get('page', { id });
 				// console.log('title ', title);
